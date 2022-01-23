@@ -1,0 +1,1784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joao.dias.MainController">
+   <children>
+      <GridPane prefHeight="800.0" prefWidth="929.0" style="-fx-background-color: GREY;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="247.0" prefWidth="459.0" style="-fx-background-color: linear-gradient(to right, #ff5000 0%,#ff0000 100%);; -fx-background-radius: 20px;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="424.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DIA A DIA" wrappingWidth="70.24609375">
+                           <font>
+                              <Font name="Segoe UI Black" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="210.0" prefWidth="434.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD7" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD8" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD9" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD11" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD12" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD13" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DD14" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0" visible="false">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Pane>
+            <Pane prefHeight="247.0" prefWidth="459.0" style="-fx-background-color: linear-gradient(to right, #9000ff 0%,#ee32ff 100%);; -fx-background-radius: 20px;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="424.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LOW CARB" wrappingWidth="70.24609375">
+                           <font>
+                              <Font name="Segoe UI Black" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="210.0" prefWidth="434.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC7" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC8" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC9" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC11" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC12" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC13" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC14" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="LC15" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="247.0" prefWidth="459.0" style="-fx-background-color: linear-gradient(to right, #004cff 0%,#32ddff 100%);; -fx-background-radius: 20px;" GridPane.rowIndex="2">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="424.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ACADEMIA" wrappingWidth="77.24609375">
+                           <font>
+                              <Font name="Segoe UI Black" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="210.0" prefWidth="434.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC7" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC8" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC9" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="190.0" prefWidth="137.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC11" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC12" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC13" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="AC14" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0" visible="false">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Pane>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="114.0" prefWidth="423.0" style="-fx-background-color: linear-gradient(to right, #137700 0%,#7cff68 100%);; -fx-background-radius: 20px;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="423.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DOCES" wrappingWidth="45.24609375">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="316.0" spacing="10.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="DC1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </Separator>
+                                    <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="DC2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="175.0" prefWidth="423.0" style="-fx-background-color: linear-gradient(to right, #ff0000 0%,#ffff00 100%);; -fx-background-radius: 20px;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="140.0" prefWidth="423.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SNAKCS" wrappingWidth="54.24609375">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="163.0" prefWidth="423.0" spacing="10.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" />
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </Separator>
+                                    <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" />
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </Separator>
+                                    <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" />
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextArea fx:id="SK6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                         <color>
+                                                            <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </TextArea>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane prefHeight="247.0" prefWidth="459.0" style="-fx-background-color: linear-gradient(to right, #ff00dc 0%,#00a5ff 100%);; -fx-background-radius: 20px;" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="424.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PAES" wrappingWidth="38.24609375">
+                           <font>
+                              <Font name="Segoe UI Black" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="210.0" prefWidth="434.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE7" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE8" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE9" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="PE10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Pane>
+            <Pane prefHeight="247.0" prefWidth="459.0" style="-fx-background-color: linear-gradient(to right, #ff002e 0%,#feffcc 100%);; -fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="424.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SOPAS" wrappingWidth="44.24609375">
+                           <font>
+                              <Font name="Segoe UI Black" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="210.0" prefWidth="434.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="143.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP4" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" pickOnBounds="false" prefHeight="200.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="247.0" prefWidth="150.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP6" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP7" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP8" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP9" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER" fillHeight="false" prefHeight="16.0" prefWidth="138.0" spacing="10.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                                             <font>
+                                                <Font name="Roboto Black" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="SP10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" style="-fx-background-insets: 10px;" HBox.hgrow="NEVER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" height="16.36" radius="11.77" spread="0.28" width="32.72">
+                                                   <color>
+                                                      <Color red="0.41999998688697815" green="0.3569999933242798" blue="0.3569999933242798" opacity="0.295367956161499" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <Pane prefHeight="800.0" prefWidth="316.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="800.0" prefWidth="294.0">
+               <children>
+                  <TextArea prefHeight="456.0" prefWidth="232.0" style="-fx-background-insets: 10px;" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#restaurar" style="-fx-background-insets: 50PX; -fx-border-color: red; -fx-border-radius: 50PX;" text="RESTAURAR">
+                           <font>
+                              <Font name="Segoe UI Black" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#imprimir" style="-fx-background-insets: 50PX; -fx-border-color: GREEN; -fx-border-radius: 50PX;" text="IMPRIMIR">
+                           <font>
+                              <Font name="Segoe UI Black" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children></Pane>
+   </children>
+</HBox>
