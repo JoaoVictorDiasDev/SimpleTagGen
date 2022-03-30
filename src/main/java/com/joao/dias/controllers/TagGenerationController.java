@@ -1,5 +1,7 @@
 package com.joao.dias.controllers;
 
+import com.joao.dias.utils.ColorController;
+
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
@@ -19,8 +21,8 @@ public class TagGenerationController {
 
     static int xoffset = 118;
     static int yoffset = 246;
-    static int titleoffsetX = 10;
-    static int titleoffsetY = 10;
+    static int elementoffsetX = 140;
+    static int elementoffsetY = 1300;
     static int currentPositionX = xoffset;
     static int currentPositionY = yoffset;
 
@@ -75,25 +77,25 @@ public class TagGenerationController {
 
         switch (type){
             case "DD":
-                graphics.setColor(new Color (255, 89, 0));
+                graphics.setColor(ColorController.DDOrange);
                 break;
             case "LC":
-                graphics.setColor(new Color(131, 0, 232));
+                graphics.setColor(ColorController.LCPurple);
                 break;
             case "AC":
-                graphics.setColor(new Color(0, 208, 255));
+                graphics.setColor(ColorController.ACBlue);
                 break;
             case "SP":
-                graphics.setColor(new Color(140, 0, 0));
+                graphics.setColor(ColorController.SPRed);
                 break;
             case "DC":
-                graphics.setColor(new Color(27, 68, 0));
+                graphics.setColor(ColorController.DCGreen);
                 break;
             case "PA":
-                graphics.setColor(new Color(123, 0, 255, 255));
+                graphics.setColor(ColorController.PAPurple);
                 break;
             case "SK":
-                graphics.setColor(new Color(255, 215, 0));
+                graphics.setColor(ColorController.SKRed);
                 break;
 
         }
@@ -124,6 +126,9 @@ public class TagGenerationController {
                    IncrementPositionCounter();
                    graphics.drawImage(imgArray[i], currentPositionX, currentPositionY, null);
                    placeValLot(graphics, type, i);
+                   placeTagsElements(String.format("KIBE DE FORNO RECHEADO COM\nRICOTA E COBERTURA DE CASTANHAS"), graphics, type, "Title");
+                   placeTagsElements(String.format("KIBE RECHEADO COM RICOTA E COBERTO DE\nCASTANHAS, LEGUMES REFOGADOS,\nARROZ COLORIDO."), graphics, type, "Description");
+                   placeTagsElements(String.format("01"), graphics, type, "Number");
                    if(needNewPage()){
                        addCurrentPageToPrintArray();
                        FileController.saveImage(currentImage);
@@ -135,11 +140,45 @@ public class TagGenerationController {
         System.out.printf("Placed Tags for Type %s\n", type);
     }
 
-    public static void placeTagsTitle (String title, Graphics2D graphics, String type){
-        graphics.setFont(FileController.poppins);
-        graphics.drawString(title, currentPositionX+titleoffsetX, currentPositionY+titleoffsetY);
-    }
-    public static void placeTagsDescription() {
+    public static void placeTagsElements (String title, Graphics2D graphics, String type, String position){
+        int lineHeight = 0;
+        int lineHeightIncrement = 0;
+
+        AffineTransform affineTransform = new AffineTransform();
+        affineTransform.rotate(Math.toRadians(270), 0, 0);
+        Font rotatedFont = FileController.poppins.deriveFont(affineTransform);
+        Font resizedFont = rotatedFont;
+
+        switch (position){
+            case "Title":
+                graphics.setColor(Color.WHITE);
+                lineHeightIncrement = 65;
+                resizedFont = rotatedFont.deriveFont(58.0f);
+                elementoffsetX = 140;
+                elementoffsetY = 1300;
+                break;
+            case "Description":
+                if(type == "DD") graphics.setColor(ColorController.DDOrange);
+                lineHeightIncrement = 50;
+                resizedFont = rotatedFont.deriveFont(45.0f);
+                elementoffsetX = 335;
+                elementoffsetY = 1500;
+                break;
+            case "Number":
+                graphics.setColor(Color.WHITE);
+                resizedFont = rotatedFont.deriveFont(100f);
+                elementoffsetX = 165;
+                elementoffsetY = 1480;
+
+        }
+
+        graphics.setFont(resizedFont);
+
+        for(String line: title.split("\n")) {
+            System.out.println(line);
+            graphics.drawString(line, currentPositionX + elementoffsetX + lineHeight, currentPositionY + elementoffsetY);
+            lineHeight += lineHeightIncrement;
+        }
 
     }
 
