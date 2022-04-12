@@ -3,14 +3,11 @@ package com.joao.dias;
 import com.joao.dias.models.Tag;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,9 +40,14 @@ public class App extends Application {
 
     public static void main(String[] args) {
 
-        Tag tag = new Tag(11);
-        System.out.println(tag.getTitle());
+        Tag tag = new Tag(12);
+        System.out.println("Tag title is: " + tag.getTagInfo("Title"));
+        System.out.println("Tag description is: " + tag.getTagInfo("Description"));
 
+
+        Tag tag1 = new Tag(11);
+        System.out.println("Tag title is: " + tag1.getTagInfo("Title"));
+        System.out.println("Tag description is: " + tag1.getTagInfo("Description"));
         launch();
 
     }

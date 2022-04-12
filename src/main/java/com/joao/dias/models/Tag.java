@@ -12,24 +12,28 @@ public class Tag {
         if (id > 10) this.id = id;
     }
 
-    public String getTitle(){
-        return "Not Found";
-    }
-
-    public String getDescription(){
-       return "Not Found";
-    }
-
-    public String getType(){
+    //Possibler infoType: Title, Description, Number, KCal, Type
+    public String getTagInfo(String infoType){
+        try{
+            Scanner scanner = new Scanner (new File(getTagConfigFileAbsolutePath()));
+            while(scanner.nextLine().equals(String.format("%s %d:", infoType, id)) != true){
+                if(scanner.nextLine().equals(String.format("%s %d:", infoType, id)) == true){
+                    System.out.println("Found Searched Text !");
+                    break;
+                }
+                scanner.nextLine();
+            }
+            return scanner.nextLine();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         return "Undefined";
     }
 
-    public int getNumber(){
-        return -1;
-    }
 
-    public int getKCal(){
-        return -1;
+    public String getTagConfigFileAbsolutePath(){
+        String absolutePath = new File(tagConfigFile).getAbsolutePath();
+        return absolutePath;
     }
 
 }
