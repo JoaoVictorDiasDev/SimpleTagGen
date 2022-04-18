@@ -144,29 +144,26 @@ public class TagGenerationController {
         int lineHeight = 0;
         int lineHeightIncrement = 0;
 
-        AffineTransform affineTransform = new AffineTransform();
-        affineTransform.rotate(Math.toRadians(270), 0, 0);
-        Font rotatedFont = FileController.poppins.deriveFont(affineTransform);
-        Font resizedFont = rotatedFont;
+        Font resizedFont = FileController.getPoppins();
 
         switch (position){
             case "Title":
                 graphics.setColor(Color.WHITE);
                 lineHeightIncrement = 65;
-                resizedFont = rotatedFont.deriveFont(58.0f);
+                resizedFont = FileController.getRotatedPoppins().deriveFont(58.0f);
                 elementoffsetX = 140;
                 elementoffsetY = 1300;
                 break;
             case "Description":
                 if(type == "DD") graphics.setColor(ColorController.DDOrange);
                 lineHeightIncrement = 50;
-                resizedFont = rotatedFont.deriveFont(45.0f);
+                resizedFont = FileController.getRotatedPoppins().deriveFont(45.0f);
                 elementoffsetX = 335;
                 elementoffsetY = 1500;
                 break;
             case "Number":
                 graphics.setColor(Color.WHITE);
-                resizedFont = rotatedFont.deriveFont(100f);
+                resizedFont = FileController.getRotatedPoppins().deriveFont(100f);
                 elementoffsetX = 165;
                 elementoffsetY = 1480;
 

@@ -57,8 +57,8 @@ public class NameGenerationController {
 
     public static void placeName (String name, Color backGroundColor){
         Graphics2D graphics = (Graphics2D) currentImage.getGraphics();
-        graphics.setFont(FileController.poppins);
-        FontMetrics metrics = graphics.getFontMetrics(FileController.poppins);
+        graphics.setFont(FileController.getPoppins());
+        FontMetrics metrics = graphics.getFontMetrics(FileController.getPoppins());
 
         graphics.setColor(backGroundColor);
         Rectangle rect = new Rectangle(currentPositionX,currentPositionY, tagWidth, tagHeight);

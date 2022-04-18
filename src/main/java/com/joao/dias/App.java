@@ -1,5 +1,6 @@
 package com.joao.dias;
 
+import com.joao.dias.models.Sheet;
 import com.joao.dias.models.Tag;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -39,17 +40,11 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        Tag tag = new Tag(101);
+        Sheet sheet = new Sheet("Tag");
+        sheet.placeTagOnSheet(tag);
 
-        Tag tag = new Tag(12);
-        System.out.println("Tag title is: " + tag.getTagInfo("Title"));
-        System.out.println("Tag description is: " + tag.getTagInfo("Description"));
-
-
-        Tag tag1 = new Tag(11);
-        System.out.println("Tag title is: " + tag1.getTagInfo("Title"));
-        System.out.println("Tag description is: " + tag1.getTagInfo("Description"));
         launch();
-
     }
 
 

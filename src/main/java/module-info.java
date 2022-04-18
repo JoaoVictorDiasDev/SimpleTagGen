@@ -2,6 +2,7 @@ module com.joao.dias {
     requires javafx.controls;
     requires javafx.fxml;
     requires transitive java.desktop;
+    requires java.sql;
 
 
     opens com.joao.dias to javafx.fxml;

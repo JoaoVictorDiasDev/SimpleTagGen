@@ -9,7 +9,10 @@ public class AlertController {
         alert.setContentText(desc);
         alert.show();
     }
-    public static void createErrorDialog(){
-
+    public static void createErrorDialog(String title, String desc){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setContentText(desc);
+        alert.show();
     }
 }

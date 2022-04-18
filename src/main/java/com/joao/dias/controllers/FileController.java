@@ -2,6 +2,7 @@ package com.joao.dias.controllers;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class FileController {
     static String savePath;
 
 
-    static Font poppins;
+    private static Font poppins;
     static File configFile;
 
     public static void loadPaths(){
@@ -103,6 +104,18 @@ public class FileController {
         } catch(IOException e){
             System.out.printf("Exception on SaveCurrentPage: %s\n- Couldn't save file", e.getMessage());
         }
+    }
+
+    public static Font getPoppins (){
+        return poppins;
+    }
+
+    public static Font getRotatedPoppins(){
+        AffineTransform affineTransform = new AffineTransform();
+        affineTransform.rotate(Math.toRadians(270), 0,0);
+        Font rotatedFont = poppins.deriveFont(affineTransform);
+
+        return rotatedFont;
     }
 
 
