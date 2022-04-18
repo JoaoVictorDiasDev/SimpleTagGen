@@ -1,5 +1,6 @@
 package com.joao.dias;
 
+import com.joao.dias.controllers.TagGenerationController;
 import com.joao.dias.models.Sheet;
 import com.joao.dias.models.Tag;
 import javafx.application.Application;
@@ -40,9 +41,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        Tag tag = new Tag(101);
-        Sheet sheet = new Sheet("Tag");
-        sheet.placeTagOnSheet(tag);
 
         launch();
     }

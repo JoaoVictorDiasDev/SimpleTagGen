@@ -1,20 +1,16 @@
 package com.joao.dias.models;
 
+import com.joao.dias.controllers.AlertController;
 import com.joao.dias.controllers.FileController;
-import com.joao.dias.controllers.PrintController;
-import com.joao.dias.utils.ColorController;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.Buffer;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.spi.CalendarDataProvider;
 
 public class Sheet {
     private int sheetHeightInPx;
@@ -37,6 +33,9 @@ public class Sheet {
     private final int lotOffSetY = 290;
 
     private BufferedImage img;
+
+    private boolean isSheetFull = false;
+
 
     public Sheet(int sheetHeightInPx, int sheetWidthInPx, int startingXPosition, int startingYPosition){
         this.sheetHeightInPx = sheetHeightInPx;
@@ -61,24 +60,39 @@ public class Sheet {
         createNewSheet();
 
     }
+
     public void placeTagOnSheet(Tag tag){
-        try{
-            Graphics2D graphics2D = (Graphics2D) img.getGraphics();
+        Graphics2D graphics2D = (Graphics2D) img.getGraphics();
+
+        placeTagBase (tag, graphics2D);
+        placeTagTitle(tag, graphics2D);
+        placeTagDescription(tag, graphics2D);
+        placeTagNumber(tag, graphics2D);
+        placeTagKCal(tag, graphics2D);
+        placeTagVal(tag, graphics2D);
+        placeTagLot(tag, graphics2D);
+        incrementTagPosition();
+    }
+
+    private void incrementTagPosition() {
+        if(currentXPosition != 3894) {
+            currentXPosition += Tag.getTagWidth();
+        } else {
+            currentXPosition = 118;
+            currentYPosition+=Tag.getTagHeight();
+        }
+
+        if(currentYPosition > 5136){
+            isSheetFull = true;
+        }
+    }
+
+    public void placeTagBase (Tag tag, Graphics2D graphics2D){
+        try {
             Image tagBase = ImageIO.read(new File(tag.getTagBaseImgPath()));
             graphics2D.drawImage(tagBase, currentXPosition, currentYPosition, null);
-
-            placeTagTitle(tag, graphics2D);
-            placeTagDescription(tag, graphics2D);
-            placeTagNumber(tag, graphics2D);
-            placeTagKCal(tag, graphics2D);
-            placeTagVal(tag, graphics2D);
-            placeTagLot(tag, graphics2D);
-
-            FileController.saveImage(img);
-            System.out.println("Successfully");
-
-        } catch (IOException e) {
-            System.out.println("Erro ao tentar carregar imagem em placeTagOnSheet: " + e.getMessage());
+        } catch (IOException e){
+            AlertController.createErrorDialog(e.getMessage(), e.getStackTrace().toString());
         }
     }
 
@@ -146,7 +160,7 @@ public class Sheet {
     }
 
     public boolean isSheetFull(){
-        return false;
+        return isSheetFull;
     }
 
     void createNewSheet(){
@@ -155,5 +169,9 @@ public class Sheet {
         graphics2D.setColor(Color.WHITE);
         graphics2D.fillRect(0,0, sheetWidthInPx, sheetHeightInPx);
         graphics2D.drawRect(0,0, sheetWidthInPx, sheetHeightInPx);
+    }
+
+    public BufferedImage getImg(){
+        return img;
     }
 }
