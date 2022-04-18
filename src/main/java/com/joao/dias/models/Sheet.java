@@ -11,6 +11,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.spi.CalendarDataProvider;
 
 public class Sheet {
     private int sheetHeightInPx;
@@ -27,6 +31,10 @@ public class Sheet {
     private final int numberOffsetY = 1480;
     private final int KCalOffsetX = 450;
     private final int KcalOffsetY = 420;
+    private final int valOffSetX = 322;
+    private final int valOffSetY = 210;
+    private final int lotOffSetX = 390;
+    private final int lotOffSetY = 290;
 
     private BufferedImage img;
 
@@ -63,6 +71,8 @@ public class Sheet {
             placeTagDescription(tag, graphics2D);
             placeTagNumber(tag, graphics2D);
             placeTagKCal(tag, graphics2D);
+            placeTagVal(tag, graphics2D);
+            placeTagLot(tag, graphics2D);
 
             FileController.saveImage(img);
             System.out.println("Successfully");
@@ -84,7 +94,6 @@ public class Sheet {
             lineHeigth += lineHeightIncrement;
         }
     }
-
 
     public void placeTagDescription(Tag tag, Graphics2D graphics2D){
         int lineHeightIncrement = 50;
@@ -111,6 +120,29 @@ public class Sheet {
         graphics2D.setFont(font);
         graphics2D.setColor(tag.getTagColor());
         graphics2D.drawString(String.format("%02d", tag.getTagKCal()), currentXPosition + KCalOffsetX, currentYPosition + KcalOffsetY);
+    }
+
+    public void placeTagVal (Tag tag, Graphics2D graphics2D){
+        Font font = FileController.getRotatedPoppins().deriveFont(35f);
+        graphics2D.setFont(font);
+        graphics2D.setColor(tag.getTagColor());
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 3);
+        DateFormat df = new SimpleDateFormat("MM/YY");
+        String val = df.format(cal.getTime());
+
+        graphics2D.drawString(val, currentXPosition + valOffSetX, currentYPosition + valOffSetY);
+    }
+
+    public void placeTagLot (Tag tag, Graphics2D graphics2D){
+        Font font = FileController.getRotatedPoppins().deriveFont(35f);
+        graphics2D.setFont(font);
+        graphics2D.setColor(tag.getTagColor());
+
+        DateFormat df = new SimpleDateFormat("MMYYdd");
+        String lot = String.format("%03d%s", tag.getId(), df.format(Calendar.getInstance().getTime()));
+        graphics2D.drawString(lot, currentXPosition + lotOffSetX, currentYPosition + lotOffSetY);
     }
 
     public boolean isSheetFull(){
