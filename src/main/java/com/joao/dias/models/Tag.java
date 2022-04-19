@@ -67,9 +67,10 @@ public class Tag {
         return "";
     }
 
-    public String getTagBaseImgPath(){
-        return new File("src/images/DD/teste1.png").getAbsolutePath();
+    public String getTagBaseImgPath() {
+        return new File(String.format("src/images/Bases/%s.png", getTagType())).getAbsolutePath();
     }
+
 
     public Color getTagColor(){
         switch (getTagType()){

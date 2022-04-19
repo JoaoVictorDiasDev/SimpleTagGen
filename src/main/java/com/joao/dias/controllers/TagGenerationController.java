@@ -2,17 +2,9 @@ package com.joao.dias.controllers;
 
 import com.joao.dias.models.Sheet;
 import com.joao.dias.models.Tag;
-import com.joao.dias.utils.ColorController;
 import com.joao.dias.utils.PrintRequest;
 
-import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Calendar;
 import java.util.LinkedList;
 
 public class TagGenerationController {
@@ -21,9 +13,9 @@ public class TagGenerationController {
     private static List<Sheet> sheets = new LinkedList<Sheet>();
 
     public static void PrintTags(PrintRequest printRequest) {
-        System.out.println("Iniciou A impressao de etiquetas");
-        currentSheet = new Sheet("Tag");
+        createNewSheet();
 
+        //TODO: SET NEEDTOPRINT TRUE WHEN NEEDED
         if(printRequest.needToPrintDD()) genericPrinter(printRequest.getPrintArrayDD(), 1);
         if(printRequest.needToPrintLC()) genericPrinter(printRequest.getPrintArrayLC(), 2);
         if(printRequest.needToPrintAC()) genericPrinter(printRequest.getPrintArrayAC(), 3);
@@ -32,12 +24,13 @@ public class TagGenerationController {
         if(printRequest.needToPrintPA()) genericPrinter(printRequest.getPrintArrayPA(), 6);
         if(printRequest.needToPrintSK()) genericPrinter(printRequest.getPrintArraySK(), 7);
 
-        saveCurrentSheet();
-        for(Sheet sheet : sheets){
-            System.out.println("Saving Sheet !");
-            FileController.saveImage(sheet.getImg());
-        }
+        saveAllSheets();
+        printAllSheets();
+        resetPrintList();
+    }
 
+    private static void resetPrintList() {
+        sheets = new LinkedList<>()
     }
 
     private static void genericPrinter(int [] printArray, int tagType){
@@ -46,7 +39,7 @@ public class TagGenerationController {
                 Tag tag = new Tag(Integer.valueOf(String.format("%d%02d", tagType, i)));
                 while(printArray[i] != 0){
                     if(currentSheet.isSheetFull()){
-                        saveCurrentSheet();
+                        addCurrentSheetToPrintList();
                         createNewSheet();
                     }
                     currentSheet.placeTagOnSheet(tag);
@@ -60,8 +53,23 @@ public class TagGenerationController {
         currentSheet = new Sheet("Tag");
     }
 
-    private static void saveCurrentSheet() {
+    private static void addCurrentSheetToPrintList() {
         sheets.add(currentSheet);
+    }
+
+    private static void saveAllSheets(){
+        addCurrentSheetToPrintList();
+        for(Sheet sheet : sheets){
+            System.out.println("Saving Sheet !");
+            FileController.saveImage(sheet.getImg());
+        }
+    }
+
+    private static void printAllSheets() {
+        PrintController.CreatePrintJob(currentSheet.getImg());
+        for(Sheet sheet : sheets){
+            PrintController.CreatePrintJob(sheet.getImg());
+        }
     }
 }
 

@@ -38,7 +38,6 @@ public class TagViewConfig {
     @FXML
     protected void imprimir() {
         try {
-            resetInputInformation();
             getInputInformation();
 
             System.out.println("Captou Clique do Botao");
@@ -96,9 +95,6 @@ public class TagViewConfig {
         printRequest.setPrintArraySK(extractInformation(SKTextArea, printRequest));
 
         return printRequest;
-    }
-
-    void resetInputInformation (){
     }
 
     int [] extractInformation (List<TextArea> textAreaList, PrintRequest printRequest){
