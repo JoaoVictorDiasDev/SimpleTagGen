@@ -24,13 +24,14 @@ public class TagGenerationController {
         if(printRequest.needToPrintPA()) genericPrinter(printRequest.getPrintArrayPA(), 6);
         if(printRequest.needToPrintSK()) genericPrinter(printRequest.getPrintArraySK(), 7);
 
+        addCurrentSheetToPrintList();
         saveAllSheets();
         printAllSheets();
         resetPrintList();
     }
 
     private static void resetPrintList() {
-        sheets = new LinkedList<>()
+        sheets = new LinkedList<>();
     }
 
     private static void genericPrinter(int [] printArray, int tagType){
@@ -58,17 +59,14 @@ public class TagGenerationController {
     }
 
     private static void saveAllSheets(){
-        addCurrentSheetToPrintList();
         for(Sheet sheet : sheets){
-            System.out.println("Saving Sheet !");
             FileController.saveImage(sheet.getImg());
         }
     }
 
     private static void printAllSheets() {
-        PrintController.CreatePrintJob(currentSheet.getImg());
         for(Sheet sheet : sheets){
-            PrintController.CreatePrintJob(sheet.getImg());
+            PrintController.createPrintJob(sheet.getImg());
         }
     }
 }

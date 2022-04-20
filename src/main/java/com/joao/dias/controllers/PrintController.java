@@ -2,7 +2,6 @@ package com.joao.dias.controllers;
 
 import com.joao.dias.utils.PrintJob;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.print.PageFormat;
 import java.awt.print.PrinterJob;
@@ -10,7 +9,7 @@ import java.awt.Graphics;
 
 public class PrintController {
 
-    public static void CreatePrintJob(BufferedImage imgToPrint){
+    public static void createPrintJob(BufferedImage imgToPrint){
         try {
             Graphics graphics =  imgToPrint.getGraphics();
             PageFormat pageFormat = new PageFormat();

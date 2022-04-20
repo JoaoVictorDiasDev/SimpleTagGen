@@ -15,11 +15,19 @@ public class Tag {
     private final String tagConfigFile = "src/main/resources/tagConfigFile.txt";
     private final String databaseURL = "jdbc:mysql://localhost:3306/nutrinicedb";
 
-    private final static int tagWidth = 944;
-    private final static int tagHeight = 1630;
+    private int tagWidth;
+    private int tagHeight;
+
+    private static String fullName;
 
     public Tag (int id){
         if (id > 10) this.id = id;
+        this.tagWidth = 944;
+        this.tagHeight = 1630;
+    }
+
+    public Tag (String fullName){
+        this.fullName = fullName;
     }
 
     public String getTagTitle(){
@@ -31,6 +39,7 @@ public class Tag {
             if(result != null && result.next()) {
                 return result.getString("TagTitle");
             }
+            connection.close();
         } catch (SQLException e){
             System.out.println("Couldn`t connect to server at getTagTitle: " + e.getMessage());
         }
@@ -70,7 +79,6 @@ public class Tag {
     public String getTagBaseImgPath() {
         return new File(String.format("src/images/Bases/%s.png", getTagType())).getAbsolutePath();
     }
-
 
     public Color getTagColor(){
         switch (getTagType()){
@@ -116,11 +124,15 @@ public class Tag {
         return id;
     }
 
-    public static int getTagWidth(){
+    public String getName(){
+        return fullName;
+    }
+
+    public int getTagWidth(){
         return tagWidth;
     }
 
-    public static int getTagHeight(){
+    public int getTagHeight(){
         return tagHeight;
     }
 }

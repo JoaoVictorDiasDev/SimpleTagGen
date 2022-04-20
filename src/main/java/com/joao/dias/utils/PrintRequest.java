@@ -1,5 +1,7 @@
 package com.joao.dias.utils;
 
+import java.util.List;
+
 public class PrintRequest {
     private boolean finished = false;
     private int [] printArrayDD = new int[15];
@@ -17,15 +19,6 @@ public class PrintRequest {
     private boolean needToPrintSP = true;
     private boolean needToPrintDC = true;
     private boolean needToPrintSK = true;
-
-
-    public void subtractOneFromPrintArrayDD (int index) {
-        printArrayDD[index]--;
-    }
-
-    public void updatePrintArrayDD(int index, int value){
-        printArrayDD[index] = value;
-    }
 
     public boolean isFinished() {
         return finished;

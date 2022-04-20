@@ -31,12 +31,16 @@ public class Sheet {
     private final int valOffSetY = 210;
     private final int lotOffSetX = 390;
     private final int lotOffSetY = 290;
+    private final int nameTagLateralGap = 5;
+
+    private int tagWidthInPx;
+    private int tagHeightInPx;
 
     private BufferedImage img;
 
     private boolean isSheetFull = false;
 
-
+/*
     public Sheet(int sheetHeightInPx, int sheetWidthInPx, int startingXPosition, int startingYPosition){
         this.sheetHeightInPx = sheetHeightInPx;
         this.sheetWidthInPx = sheetWidthInPx;
@@ -45,6 +49,7 @@ public class Sheet {
         createNewSheet();
 
     }
+*/
 
     //sheetType: Tag or Name
     //This constructor automatically sets sheet specs depending on its purpose
@@ -55,10 +60,19 @@ public class Sheet {
                 sheetWidthInPx = 4960;
                 currentXPosition = 118;
                 currentYPosition = 246;
+                tagHeightInPx = 1630;
+                tagWidthInPx = 940;
+                break;
+            case "Name":
+                sheetHeightInPx = 7014;
+                sheetWidthInPx = 4867;
+                currentXPosition = 103; //1cm
+                currentYPosition = 151; //0.5cm
+                tagHeightInPx = 516;
+                tagWidthInPx = 930;
                 break;
         }
         createNewSheet();
-
     }
 
     public void placeTagOnSheet(Tag tag){
@@ -75,16 +89,36 @@ public class Sheet {
     }
 
     private void incrementTagPosition() {
-        if(currentXPosition != 3894) {
-            currentXPosition += Tag.getTagWidth();
-        } else {
-            currentXPosition = 118;
-            currentYPosition+=Tag.getTagHeight();
+        //Sheet is of type tag
+        if(sheetWidthInPx == 4960) {
+            System.out.println("Sheet is of type Tag!");
+            if(currentXPosition != tagWidthInPx*4+118) {
+                System.out.println("Incremented Position to the Right");
+                currentXPosition += tagWidthInPx;
+            } else {
+                System.out.println("Incremented Position to the Left");
+                currentXPosition = 118;
+                currentYPosition+= tagHeightInPx;
+            }
+            if(currentYPosition > 5136){
+                isSheetFull = true;
+            }
         }
 
-        if(currentYPosition > 5136){
-            isSheetFull = true;
+        //Sheet is of type name
+        if(sheetWidthInPx == 4867){
+            if(currentXPosition != (tagWidthInPx*4)+(nameTagLateralGap*4)+103){
+                currentXPosition+=(tagWidthInPx+nameTagLateralGap);
+            } else{
+                currentXPosition = 103;
+                currentYPosition+=tagHeightInPx;
+                System.out.println(currentYPosition);
+            }
+            if(currentYPosition > 6343){
+                isSheetFull = true;
+            }
         }
+
     }
 
     public void placeTagBase (Tag tag, Graphics2D graphics2D){
@@ -159,6 +193,29 @@ public class Sheet {
         graphics2D.drawString(lot, currentXPosition + lotOffSetX, currentYPosition + lotOffSetY);
     }
 
+    public void placeNameTag (Tag tag, Color color){
+        Graphics2D graphics2D = (Graphics2D) img.getGraphics();
+        graphics2D.setFont(FileController.getPoppins());
+        FontMetrics metrics = graphics2D.getFontMetrics(FileController.getPoppins());
+        Rectangle rect = new Rectangle(currentXPosition, currentYPosition, 930, 516);
+
+        graphics2D.setColor(Color.BLACK);
+        graphics2D.drawRect(rect.x, rect.y, rect.width, rect.height);
+        int lineHeight = metrics.getHeight();
+        int lineNumber = 0;
+
+        graphics2D.setColor(color);
+        for(String line : tag.getName().split("/")){
+            System.out.println(line);
+            int x = rect.x + (rect.width - metrics.stringWidth(line)) / 2;
+            int y = rect.y + ((rect.height - metrics.getHeight()) / 2) + metrics.getAscent();
+            graphics2D.drawString(line, x, y + (lineHeight * lineNumber));
+            lineNumber++;
+        }
+
+        incrementTagPosition();
+    }
+
     public boolean isSheetFull(){
         return isSheetFull;
     }
@@ -175,4 +232,23 @@ public class Sheet {
         return img;
     }
 
+    public int getTagWidthInPx() {
+        return tagWidthInPx;
+    }
+
+    public int getTagHeightInPx(){
+        return tagHeightInPx;
+    }
+
+    public int getNameTagLateralGap(){
+        return nameTagLateralGap;
+    }
+
+    public void setCurrentXPosition(int currentXPosition){
+       this.currentXPosition = currentXPosition;
+    }
+
+    public void setCurrentYPosition(int currentYPosition){
+        this.currentYPosition = currentYPosition;
+    }
 }
