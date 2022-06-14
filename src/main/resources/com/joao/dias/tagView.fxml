@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<Pane minHeight="899.0" minWidth="1400.0" prefHeight="902.0" prefWidth="1413.0" style="-fx-background-color: grey;" stylesheets="@tagView.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joao.dias.configs.TagViewConfig">
+   <children>
+      <Pane maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0" style="-fx-background-radius: 0, 10, 10, 0; -fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
+               <children>
+                  <HBox prefHeight="10.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label styleClass="h2" text="ETIQUETAS: " />
+                        <Label styleClass="h2" text="50" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="h2" text="FOLHAS: " />
+                        <Label styleClass="h2" text="50" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox prefHeight="793.0" prefWidth="300.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="10.0" prefWidth="200.0">
+                           <children>
+                              <Label id="tag-title" styleClass="h1" text="ETIQUETA PERSONALIZADA" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="10.0" prefWidth="200.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="90.0" styleClass="h2" text="Tipo" />
+                              <TextArea prefHeight="15.0" prefWidth="232.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox prefHeight="112.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="90.0" styleClass="h2" text="Título" />
+                              <TextArea prefHeight="78.0" prefWidth="260.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="196.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="143.0" styleClass="h2" text="Descrição" />
+                              <TextArea prefHeight="158.0" prefWidth="260.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="84.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="143.0" styleClass="h2" text="Num" />
+                              <TextArea prefHeight="22.0" prefWidth="260.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="84.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="143.0" styleClass="h2" text="KCal" />
+                              <TextArea prefHeight="22.0" prefWidth="260.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="84.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Label id="tag-title" prefHeight="28.0" prefWidth="143.0" styleClass="h2" text="Quantidade" />
+                              <TextArea prefHeight="22.0" prefWidth="260.0" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#print" prefHeight="23.0" prefWidth="260.0" text="IMPRIMIR">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="-7.0" maxHeight="900.0" maxWidth="800.0" minHeight="900.0" minWidth="792.0" prefHeight="900.0" prefWidth="792.0" style="-fx-background-color: grey;">
+         <children>
+            <Pane layoutX="14.0" layoutY="17.0" prefHeight="285.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to left, #ff0000, #ff3400, #ff4c00, #ff5e00, #ff6e00);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="285.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="2.0" prefWidth="17.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="73.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="104.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Kibe" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Strog." GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Cação" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Xadrez" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Feijo" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Escond." GridPane.rowIndex="5" />
+                        <Label prefHeight="24.0" prefWidth="123.0" style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Panqu." GridPane.rowIndex="6" />
+                        <TextArea fx:id="DD1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="DD2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="DD3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="DD4" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="DD5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea fx:id="DD6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextArea fx:id="DD7" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Fricas." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Galinh." GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Saint" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Mada." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Suíno." GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Baião" GridPane.columnIndex="3" />
+                        <TextArea fx:id="DD8" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                        <TextArea fx:id="DD9" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea fx:id="DD10" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea fx:id="DD11" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextArea fx:id="DD12" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <TextArea fx:id="DD13" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextArea fx:id="DD14" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Macar." GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="311.0" prefHeight="285.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to right bottom, #9b00ff, #b900fd, #d200fa, #ea00f7, #ff00f4); -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="285.0" prefWidth="382.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="2.0" prefWidth="17.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="73.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="104.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Kibe" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Isca" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Cação" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Xadrez" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Lombo" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Escond." GridPane.rowIndex="5" />
+                        <Label prefHeight="24.0" prefWidth="123.0" style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="C. Milho" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="B. Rolê" GridPane.rowIndex="7" />
+                        <TextArea fx:id="LC1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="LC2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="LC3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="LC4" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="LC5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea fx:id="LC6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextArea fx:id="LC7" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextArea fx:id="LC8" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="F. Aça" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Saint" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Badejo" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Wrap" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Charu." GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Rolê S." GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Fricas." GridPane.columnIndex="3" />
+                        <TextArea fx:id="LC9" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                        <TextArea fx:id="LC10" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea fx:id="LC11" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea fx:id="LC12" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextArea fx:id="LC13" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <TextArea fx:id="LC14" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextArea fx:id="LC15" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="604.0" prefHeight="285.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to left, #000cff, #0055ff, #007aff, #0098ff, #00b2ff);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="285.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="2.0" prefWidth="17.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="73.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="104.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Mada." />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Strog." GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Cação" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Bobó" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Feijo" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Yakis." GridPane.rowIndex="5" />
+                        <Label prefHeight="24.0" prefWidth="123.0" style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="C. Milho" GridPane.rowIndex="6" />
+                        <TextArea fx:id="AC1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="AC2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="AC3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="AC4" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="AC5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea fx:id="AC6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextArea fx:id="AC7" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="F. 3Q." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Rolê S." GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Canel." GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Badejo" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Lombo" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="B. Rolê" GridPane.columnIndex="3" />
+                        <TextArea fx:id="AC8" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                        <TextArea fx:id="AC9" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea fx:id="AC10" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea fx:id="AC11" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextArea fx:id="AC12" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <TextArea fx:id="AC13" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextArea fx:id="AC14" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Charu." GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="405.0" layoutY="17.0" prefHeight="285.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to left, #ff2af6, #d15cff, #a075ff, #6c85ff, #378eff);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="285.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="88.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="79.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="82.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="79.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Ervas" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Gergelim" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Sementes" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Natural" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Q. Coalho" GridPane.rowIndex="4" />
+                        <TextArea fx:id="PA1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="PA2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="PA3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="PA4" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="PA5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Alho c. Alecri" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Tomate Seco" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Proteico" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Castanhas" GridPane.columnIndex="3" />
+                        <TextArea fx:id="PA6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                        <TextArea fx:id="PA7" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea fx:id="PA8" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea fx:id="PA9" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="405.0" layoutY="311.0" prefHeight="285.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to right top, #ff0043, #ff2b43, #ff3f45, #ff4f46, #ff5c49, #ff7048, #ff824a, #ff934e, #ffae57, #ffc966, #ffe27c, #fffa96);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="285.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="88.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="79.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="82.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="79.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Milho" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Canja" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Palmito" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Vó Landa" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Mandio." GridPane.rowIndex="4" />
+                        <TextArea fx:id="SP1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="SP2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="SP3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="SP4" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="SP5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Ligth" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Couve" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Cenoura" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Detox" GridPane.columnIndex="3" />
+                        <TextArea fx:id="SP6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                        <TextArea fx:id="SP7" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea fx:id="SP8" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea fx:id="SP9" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Funcio." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextArea fx:id="SP10" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="405.0" layoutY="604.0" prefHeight="84.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to right top, #2ac93e, #3ea426, #408113, #396005, #2d4100);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="84.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="62.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="105.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="59.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="102.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Bolo P." />
+                        <TextArea fx:id="DC1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Bolo G." GridPane.columnIndex="3" />
+                        <TextArea fx:id="DC2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="405.0" layoutY="695.0" prefHeight="158.0" prefWidth="382.0" style="-fx-background-color: linear-gradient(to right top, #ffdd00, #ffb700, #ff8e00, #ff5e00, #ff0000);; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow height="1.0" offsetX="-3.0" offsetY="3.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <GridPane prefHeight="158.0" prefWidth="382.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="62.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="105.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="59.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="102.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="T. Atum" GridPane.rowIndex="2" />
+                        <TextArea fx:id="SK3" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Bol. C." GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextArea fx:id="SK6" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Coxi." />
+                        <TextArea fx:id="SK1" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Muffin" GridPane.rowIndex="1" />
+                        <TextArea fx:id="SK2" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" GridPane.columnIndex="3" />
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: white;" styleClass="h1" text="Risole" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextArea fx:id="SK5" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane layoutX="1100.0" maxHeight="900.0" maxWidth="313.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="313.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" style="-fx-background-color: RED;" text="ETIQUETA MARMITAS">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0" text="ETIQUETA NOMES" />
+                        <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0" text="GERADOR PASSANDO" />
+                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children></Pane>
+   </children>
+</Pane>

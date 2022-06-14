@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Poppins Black;
+    src: url('Poppins-Black.ttf');
+}
+
+
+@font-face {
+    font-family: Poppins;
+    src: url('Poppins-Bold.ttf');
+}
+
+
+@font-face {
+    font-family: Poppins Medium;
+    src: url('Poppins-Medium.ttf');
+}
+
+
+@font-face {
+    font-family: Poppins Light;
+    src: url('Poppins-Light.ttf');
+}
+
+
+.h1{
+    -fx-font-family:"Poppins Black";
+    -fx-font-size: 20px;
+}
+
+.h2{
+    -fx-font-family:"Poppins";
+    -fx-font-size: 20px;
+}
+
+
+.h3{
+    -fx-font-family:"Poppins Medium";
+    -fx-font-size: 20px;
+}
+
+
+.h4{
+    -fx-font-family:"Poppins Light";
+    -fx-font-size: 20px;
+}
+
+#tag-title{
+    -fx-font-size: 19px;
+}
+
+
+
+.text-tag {
+    -fx-font-family: "Poppins";
+    -fx-font-size: 12px;
+}
+
+.choice-box {
+  -fx-background-color: rgb(248, 248, 248);
+  -fx-mark-color: orange;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 1, 0, -4, 4);
+
+}
+
+.text-area{
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-background-color: rgb(248, 248, 248);
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 1, 0, -4, 4);
+}
+
+.text-area .content{
+  -fx-background-color: rgb(248, 248, 248);
+}
+
+.button {
+    -fx-font-family: "Poppins";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-background-color: rgba(255, 92, 0, 1);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 1, 0, -4, 4);
+}
+
+/*making text-area round transparent*/
+.text-area .scroll-pane {
+  -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+  -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+  -fx-background-color: transparent;
+}

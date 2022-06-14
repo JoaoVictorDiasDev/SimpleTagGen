@@ -1,13 +1,11 @@
 package com.joao.dias;
 
-import com.joao.dias.controllers.TagGenerationController;
-import com.joao.dias.models.Sheet;
-import com.joao.dias.models.Tag;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -19,7 +17,7 @@ import java.util.List;
 public class App extends Application {
     static AnchorPane root;
     private static Scene scene;
-    static List<HBox> grids = new ArrayList<HBox>();
+    static List<Pane> grids = new ArrayList<>();
     static int currentPaneId = 0;
 
     @Override
@@ -27,14 +25,16 @@ public class App extends Application {
         try {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("anchor.fxml"));
 
-            grids.add((HBox) FXMLLoader.load(getClass().getResource("tag-view.fxml")));
-            grids.add((HBox) FXMLLoader.load(getClass().getResource("name-view.fxml")));
+            grids.add((Pane) FXMLLoader.load(getClass().getResource("tagView.fxml")));
+            grids.add((Pane) FXMLLoader.load(getClass().getResource("nameView.fxml")));
+            grids.add((Pane) FXMLLoader.load(getClass().getResource("passView.fxml")));
 
             root.getChildren().add(grids.get(currentPaneId));
-            Scene scene = new Scene(root, 1200, 800);
+            Scene scene = new Scene(root, 1400, 900);
             stage.setScene(scene);
-            stage.setTitle("NutriNice TagGen");
+            stage.setTitle("NutriNice SimpleTagGen");
             stage.show();
+
         } catch(Exception e){
             System.out.println("Exception in App.start: " + e.getMessage());
         }
@@ -55,5 +55,11 @@ public class App extends Application {
         root.getChildren().remove(grids.get(currentPaneId));
         root.getChildren().add(grids.get(0));
         currentPaneId = 0;
+    }
+
+    public static void changeToPassView(){
+        root.getChildren().remove(grids.get(currentPaneId));
+        root.getChildren().add(grids.get(2));
+        currentPaneId = 2;
     }
 }

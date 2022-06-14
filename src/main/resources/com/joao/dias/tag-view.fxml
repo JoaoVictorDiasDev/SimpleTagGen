@@ -1763,7 +1763,7 @@
                               <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                            </padding>
                         </Button>
-                        <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#imprimir" style="-fx-background-insets: 50PX; -fx-border-color: GREEN; -fx-border-radius: 50PX;" text="IMPRIMIR">
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#print" style="-fx-background-insets: 50PX; -fx-border-color: GREEN; -fx-border-radius: 50PX;" text="IMPRIMIR">
                            <font>
                               <Font name="Segoe UI Black" size="12.0" />
                            </font>

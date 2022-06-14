@@ -1,13 +1,14 @@
 package com.joao.dias.configs;
 
 import com.joao.dias.App;
+import com.joao.dias.utils.ClipBoardController;
 import com.joao.dias.controllers.TagGenerationController;
 import com.joao.dias.utils.PrintRequest;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
-import org.w3c.dom.Text;
 
-import java.util.Collection;
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,28 +30,20 @@ public class TagViewConfig {
     private TextArea DC1, DC2;
 
     @FXML
-    private TextArea SK1, SK2, SK3, SK4, SK5, SK6;
+    private TextArea SK1, SK2, SK3, SK5, SK6;
 
     @FXML
     private TextArea PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA9;
 
-
     @FXML
-    protected void imprimir() {
+    protected void print() {
         try {
             getInputInformation();
-
-            System.out.println("Captou Clique do Botao");
             TagGenerationController.PrintTags(getInputInformation());
 
         } catch (Exception e){
-            System.out.printf("Exception on MainController.Generate: %s\n", e.getMessage());
+            System.out.printf("Exception on TagViewConfig.print: %s\n", e.getMessage());
         }
-    }
-
-    @FXML
-    protected void restaurar(){
-
     }
 
     @FXML
@@ -58,16 +51,21 @@ public class TagViewConfig {
         App.changeToNameView();
     }
 
+    @FXML
+    protected void changeToPassView() {
+        App.changeToPassView();
+    }
+
     PrintRequest getInputInformation(){
         PrintRequest printRequest = new PrintRequest();
 
-        List<TextArea> DDTextArea = new LinkedList<TextArea>();
-        List<TextArea> LCTextArea = new LinkedList<TextArea>();
-        List<TextArea> ACTextArea = new LinkedList<TextArea>();
-        List<TextArea> PATextArea = new LinkedList<TextArea>();
-        List<TextArea> SPTextArea = new LinkedList<TextArea>();
-        List<TextArea> DCTextArea = new LinkedList<TextArea>();
-        List<TextArea> SKTextArea = new LinkedList<TextArea>();
+        List<TextArea> DDTextArea = new ArrayList<>();
+        List<TextArea> LCTextArea = new ArrayList<>();
+        List<TextArea> ACTextArea = new ArrayList<>();
+        List<TextArea> PATextArea = new ArrayList<>();
+        List<TextArea> SPTextArea = new ArrayList<>();
+        List<TextArea> DCTextArea = new ArrayList<>();
+        List<TextArea> SKTextArea = new ArrayList<>();
 
         Collections.addAll(DDTextArea, DD1, DD2, DD3, DD4, DD5, DD6, DD7, DD8, DD9,
                                        DD10, DD11, DD12, DD13, DD14);
@@ -84,20 +82,20 @@ public class TagViewConfig {
 
         Collections.addAll(DCTextArea, DC1, DC2);
 
-        Collections.addAll(SKTextArea, SK1, SK2, SK3, SK4, SK5, SK6);
+        Collections.addAll(SKTextArea, SK1, SK2, SK3, SK5, SK6);
 
-        printRequest.setPrintArrayDD(extractInformation(DDTextArea, printRequest));
-        printRequest.setPrintArrayLC(extractInformation(LCTextArea, printRequest));
-        printRequest.setPrintArrayAC(extractInformation(ACTextArea, printRequest));
-        printRequest.setPrintArrayPA(extractInformation(PATextArea, printRequest));
-        printRequest.setPrintArraySP(extractInformation(SPTextArea, printRequest));
-        printRequest.setPrintArrayDC(extractInformation(DCTextArea, printRequest));
-        printRequest.setPrintArraySK(extractInformation(SKTextArea, printRequest));
+        printRequest.setPrintArrayDD(extractInformation(DDTextArea));
+        printRequest.setPrintArrayLC(extractInformation(LCTextArea));
+        printRequest.setPrintArrayAC(extractInformation(ACTextArea));
+        printRequest.setPrintArrayPA(extractInformation(PATextArea));
+        printRequest.setPrintArraySP(extractInformation(SPTextArea));
+        printRequest.setPrintArrayDC(extractInformation(DCTextArea));
+        printRequest.setPrintArraySK(extractInformation(SKTextArea));
 
         return printRequest;
     }
 
-    int [] extractInformation (List<TextArea> textAreaList, PrintRequest printRequest){
+    int [] extractInformation (List<TextArea> textAreaList){
         int [] Array = new int[16];
         int counter = 1;
         for(TextArea textArea : textAreaList) {
@@ -106,7 +104,6 @@ public class TagViewConfig {
             }
             counter++;
         }
-
         return Array;
     }
 }
