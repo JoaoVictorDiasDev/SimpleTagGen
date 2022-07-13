@@ -1,0 +1,16 @@
+Path AC
+src/images/AC/
+Path DC
+src/images/DC/
+Path DD
+src/images/DD/
+Path LC
+src/images/LC/
+Path PA
+src/images/PA/
+Path SK
+src/images/SK/
+Path SP
+src/images/SP/
+Save Path
+src/images/print/

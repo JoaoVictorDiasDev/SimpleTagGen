@@ -28,16 +28,11 @@ public class PassGenerationController {
         }
     }
 
-    private String getNumber(String infoLine) {
-        String[] lineComponents = infoLine.split("\t");
-        return lineComponents[3];
-    }
 
     public void populateNamesList (String fullInfo){
         String[] lines = fullInfo.split("\n");
         for(String line : lines){
-            String[] lineComponents = line.split("\t");
-            names.add(lineComponents[6]);
+            names.add(getFullName(line));
         }
     }
 
@@ -49,38 +44,57 @@ public class PassGenerationController {
     }
 
     private String getMessage(String lineInfo){
-        return String.format("Boa noite, %s \uD83D\uDE03\n\nPassando apenas para lembrar que seu pedido será entregue *amanhã*, no período da tarde, entre %s\n\n*Endereço de Entrega*: %s - %s\n\n*Forma de Pagamento*: %s", getName(lineInfo), getTime(lineInfo), getAdress(lineInfo), getDistrict(lineInfo), getPaymentMethod(lineInfo));
+        return String.format("Boa noite, %s \uD83D\uDE03\n\n" +
+                "Passando apenas para lembrar que seu pedido será entregue amanhã, no período da %s, com previsão de chegada entre %s, tudo bem ? \uD83D\uDE0A\n" +
+                "Vamos confirmar os dados do seu pedido ?\n\n\uD83D\uDCCD *Endereço de entrega:* %s - %s - certifique-se de que o complemento está correto (se houver)\n" +
+                "\uD83D\uDCB3 *Forma de pagamento* %s\n" +
+                "\uD83D\uDCB2 *Valor total*: %s\n\nCaso seja necessário alterar alguma informação, basta nos responder essa mensagem \uD83D\uDE09\n" +
+                "Agradecemos e permanecemos à disposição ! \t", getName(lineInfo), getDeliveryPeriod(lineInfo),  getTime(lineInfo), getAdress(lineInfo), getDistrict(lineInfo), getPaymentMethod(lineInfo), getValue(lineInfo));
+    }
+
+    private String getNumber(String infoLine) {
+        String[] lineComponents = infoLine.split("\t");
+        return lineComponents[4];
     }
 
     private String getTime(String infoLine) {
         String[] s = infoLine.split("\t");
-        return s[7];
+        return s[8];
+    }
+
+    private String getDeliveryPeriod(String infoLine){
+        String[] s = infoLine.split("\t");
+        return s[9];
     }
 
     public String getFullName(String infoLine){
         String[] lineComponents = infoLine.split("\t");
+        return lineComponents[7];
+    }
+
+    private String getValue(String infoLine) {
+        String[] lineComponents = infoLine.split("\t");
         return lineComponents[6];
     }
 
-    public static String getName (String infoLine){
-        String[] s = infoLine.split("\t");
-        String[] result = s[6].split(" ");
+    public String getName (String infoLine){
+        String[] result = getFullName(infoLine).split(" ");
         return result[0];
     }
 
-    public static String getAdress(String infoString){
+    public String getAdress(String infoString){
         String[] s = infoString.split("\t");
-        return s[2];
+        return s[3];
     }
 
     public static String getDistrict(String infoString){
         String[] s = infoString.split("\t");
-        return s[1];
+        return s[2];
     }
 
     public static String getPaymentMethod(String infoString){
         String[] s = infoString.split("\t");
-        return s[4];
+        return s[5];
     }
 
     public List<String> getNameList() {

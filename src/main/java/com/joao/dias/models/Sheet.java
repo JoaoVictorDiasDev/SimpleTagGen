@@ -193,7 +193,7 @@ public class Sheet {
         graphics2D.drawString(lot, currentXPosition + lotOffSetX, currentYPosition + lotOffSetY);
     }
 
-    public void placeNameTag (Tag tag, Color color){
+    public void placeNameTag (Tag tag, Color color, int counter){
         Graphics2D graphics2D = (Graphics2D) img.getGraphics();
         graphics2D.setFont(FileController.getPoppins());
         FontMetrics metrics = graphics2D.getFontMetrics(FileController.getPoppins());
@@ -208,12 +208,17 @@ public class Sheet {
         for(String line : tag.getName().split("/")){
             System.out.println(line);
             int x = rect.x + (rect.width - metrics.stringWidth(line)) / 2;
-            int y = rect.y + ((rect.height - metrics.getHeight()) / 2) + metrics.getAscent();
+            int y = rect.y + ((rect.height - metrics.getHeight()) / 3) + metrics.getAscent();
             graphics2D.drawString(line, x, y + (lineHeight * lineNumber));
             lineNumber++;
         }
 
+        String bagCounter = String.format("%d/%d", (counter+1), tag.getAmountToPrint());
+        int x = rect.x + (rect.width - metrics.stringWidth(bagCounter)) / 2;
+        int y = rect.y + ((rect.height - metrics.getHeight()) / 3) + metrics.getAscent();
+        graphics2D.drawString(bagCounter, x, y + (lineHeight * lineNumber));
         incrementTagPosition();
+
     }
 
     public boolean isSheetFull(){

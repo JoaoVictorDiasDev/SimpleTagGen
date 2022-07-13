@@ -4,13 +4,12 @@ import com.joao.dias.models.Sheet;
 import com.joao.dias.models.Tag;
 
 import java.awt.*;
-import java.sql.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class NameGenerationController {
-
-    private String[] lines;
 
     int tagHeight = 516; //2cm
     int tagWidth = 930; //4cm
@@ -24,9 +23,7 @@ public class NameGenerationController {
     private Sheet currentSheet;
     private int colorCounter;
 
-    private static List<Integer> namesAmounts = new ArrayList<Integer>();
-    private static List<String> namesList = new ArrayList<String>();
-
+    private List<Tag> tagsToPrint = new ArrayList<>();
     private List<Sheet> sheets = new ArrayList<Sheet>();
 
     public NameGenerationController (int startingTagPosition){
@@ -44,10 +41,10 @@ public class NameGenerationController {
     }
 
     public void printNames(String namesText){
-        populateArray(namesText);
+        populateTagsToPrint(namesText);
 
-        for(int i = 0; i < namesList.size(); i++){
-            genericPrinter(namesList.get(i), namesAmounts.get(i));
+        for(int i = 0; i < tagsToPrint.size(); i++){
+            genericPrinter(tagsToPrint.get(i));
         }
 
         addCurrentSheetToPrintList();
@@ -61,15 +58,18 @@ public class NameGenerationController {
         sheets = new ArrayList<Sheet>();
     }
 
-    private void genericPrinter(String fullName, int amount) {
+    private void resetTagList(){
+        tagsToPrint = new ArrayList<>();
+    }
+
+    private void genericPrinter(Tag tagToPrint) {
         Color color = getRandomColor();
-        Tag tag = new Tag(fullName);
-        for(int i = 0; i < amount; i++){
+        for(int counter = 0; counter < tagToPrint.getAmountToPrint(); counter++){
             if(currentSheet.isSheetFull()){
                 addCurrentSheetToPrintList();
                 createNewSheet();
             }
-            currentSheet.placeNameTag (tag, color);
+            currentSheet.placeNameTag (tagToPrint, color, counter);
         }
     }
 
@@ -93,21 +93,23 @@ public class NameGenerationController {
         }
     }
 
-    public void populateArray(String namesText){
-
-        lines = namesText.split("\\n");
+    public void populateTagsToPrint(String namesText){
+        String [] lines = namesText.split("\\n");
         for(int i = 0; i < lines.length; i++){
             if(lines[i] != null) {
-                namesList.add(lines[i].replaceAll("[0-9()]",""));
-                namesAmounts.add(Integer.parseInt(lines[i].replaceAll("[^0-9]", "")));
+                String name = lines[i].replaceAll("[0-9()]", "");
+                int amount = Integer.parseInt(lines[i].replaceAll("[^0-9]", ""));
+
+                Tag tag = new Tag(name, amount);
+                tagsToPrint.add(tag);
             }
         }
     }
 
     public Color getRandomColor(){
-        final float hue = 0.100f*colorCounter;
-        final float saturation = 0.5f;//1.0 for brilliant, 0.0 for dull
-        final float luminance = 1.0f; //1.0 for brighter, 0.0 for black
+        final float hue = 0.200f*colorCounter;
+        final float saturation = 0.7f;//1.0 for brilliant, 0.0 for dull
+        final float luminance = 0.9f; //1.0 for brighter, 0.0 for black
         Color backGroundColor = new Color(0, 0, 0);
         backGroundColor = Color.getHSBColor(hue, saturation, luminance);
 

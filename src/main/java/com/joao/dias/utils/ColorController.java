@@ -3,12 +3,13 @@ package com.joao.dias.utils;
 import java.awt.*;
 
 public class ColorController {
-    public static Color DDOrange = new Color (255, 89, 0);
-    public static Color LCPurple = new Color (131, 0, 232);
-    public static Color ACBlue = new Color (0, 208, 255);
-    public static Color SPRed = new Color (140, 0, 0);
-    public static Color DCGreen = new Color (27, 86, 0);
-    public static Color PAPurple = new Color(123, 0, 255, 255);
-    public static Color SKRed = new Color (255, 215, 0);
+    public static final Color DDOrange = new Color (241, 82, 0);
+    public static final Color LCPurple = new Color (117, 17, 170);
+    public static final Color ACBlue = new Color (94, 202, 231);
+    public static final Color SPRed = new Color (191, 51, 70);
+    public static final Color DCGreen = new Color (24, 87, 59);
+    public static final Color PAPurple = new Color(64, 76, 157, 255);
+    public static final Color SKRed = new Color (224, 205, 61);
+    public static final Color ECGreen = new Color (89, 163, 79);
 
 }

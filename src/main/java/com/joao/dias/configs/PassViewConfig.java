@@ -1,5 +1,6 @@
 package com.joao.dias.configs;
 
+import com.joao.dias.App;
 import com.joao.dias.controllers.PassGenerationController;
 import com.joao.dias.utils.ClipBoardController;
 import javafx.event.ActionEvent;
@@ -25,21 +26,27 @@ public class PassViewConfig {
     protected TextArea textArea;
 
     @FXML
-    protected void gerar(){
+    protected void generate(){
         PassGenerationController passGenerationController = new PassGenerationController();
         passGenerationController.populateNamesList(textArea.getText());
         passGenerationController.populateMessageList(textArea.getText());
         passGenerationController.populateNameToNumberMap(textArea.getText());
         passGenerationController.populateNameToMessageMap(textArea.getText());
 
+        System.out.println("Working!!!");
+
+        System.out.println(passGenerationController.getNameList());
         nameVBox.getChildren().addAll(createNamesButtons(passGenerationController.getNameList(), passGenerationController.getNameToNumberMap()));
-        msgVBox.getChildren().addAll(createNamesButtons(passGenerationController.getNameList(), passGenerationController.getNameToMessageMap()));
+        msgVBox.getChildren().addAll(createMessageButtons(passGenerationController.getNameList(), passGenerationController.getNameToMessageMap()));
     }
 
     private List<Button> createNamesButtons(List<String> names, Map<String, String> nameToNumberMap){
         List<Button> nameButtonsList = new ArrayList<>();
         for(String name : names){
             Button button = new Button();
+            button.setPrefHeight(30f);
+            button.setMaxHeight(30f);
+            button.setMinHeight(30f);
             button.setText(name);
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
@@ -69,4 +76,19 @@ public class PassViewConfig {
         }
         return messageButtonsList;
     }
+
+
+
+    @FXML
+    protected void changeToNameView () {
+        App.changeToNameView();
+    }
+
+    @FXML
+    protected void changeToPassView() {
+        App.changeToPassView();
+    }
+
+    @FXML
+    protected void changeToTagView(){ App.changeToTagView(); }
 }

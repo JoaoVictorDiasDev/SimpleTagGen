@@ -18,6 +18,7 @@ public class Tag {
     private int tagHeight;
 
     private static String fullName;
+    private static int amountToPrint;
 
     private String tagTitle;
     private String tagDescription;
@@ -37,7 +38,8 @@ public class Tag {
 
     }
 
-    public Tag (String fullName){
+    public Tag (String fullName, int amountToPrint){
+        this.amountToPrint = amountToPrint;
         this.fullName = fullName;
     }
 
@@ -71,6 +73,16 @@ public class Tag {
                 return ColorController.DDOrange;
             case "LC":
                 return ColorController.LCPurple;
+            case "AC":
+                return ColorController.ACBlue;
+            case "SP":
+                return ColorController.SPRed;
+            case "PA":
+                return ColorController.PAPurple;
+            case "DC":
+                return ColorController.DCGreen;
+            case "SK":
+                return ColorController.SKRed;
         }
         return Color.black;
     }
@@ -83,7 +95,7 @@ public class Tag {
         return fullName;
     }
 
-    public int getTagWeigth(){return tagWeigth;}
+    public int getAmountToPrint(){ return amountToPrint; }
 
     public void setTagTitle(String tagTitle) {
         this.tagTitle = tagTitle;
