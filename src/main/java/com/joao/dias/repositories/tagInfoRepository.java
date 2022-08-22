@@ -16,7 +16,7 @@ import java.util.Iterator;
 public class tagInfoRepository {
     public String genericStringFinder(double id, int col) {
         try{
-            File file = new File("src/data/test.xlsx");
+            File file = new File("src/data/db.xlsx");
             FileInputStream fis = new FileInputStream(file);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);
@@ -36,7 +36,7 @@ public class tagInfoRepository {
 
     public double genericDoubleFinder(double id, int col) {
         try{
-            File file = new File("src/data/test.xlsx");
+            File file = new File("src/data/db.xlsx");
             FileInputStream fis = new FileInputStream(file);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);

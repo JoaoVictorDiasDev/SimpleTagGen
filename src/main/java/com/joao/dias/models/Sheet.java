@@ -24,12 +24,12 @@ public class Sheet {
     private final int descriptionOffsetX = 335;
     private final int descriptionOffsetY = 1500;
     private final int numberOffsetX = 165;
-    private final int numberOffsetY = 1480;
+    private final int numberOffsetY = 1500;
     private final int KCalOffsetX = 450;
-    private final int KcalOffsetY = 420;
-    private final int valOffSetX = 322;
+    private final int KcalOffsetY = 400;
+    private final int valOffSetX = 323;
     private final int valOffSetY = 210;
-    private final int lotOffSetX = 390;
+    private final int lotOffSetX = 385;
     private final int lotOffSetY = 290;
     private final int nameTagLateralGap = 5;
 
@@ -160,7 +160,9 @@ public class Sheet {
         Font font = FileController.getRotatedPoppins().deriveFont(100f);
         graphics2D.setFont(font);
         graphics2D.setColor(Color.WHITE);
-        graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY);
+        if(tag.getTagNumber() >= 10)
+            graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY - 20);
+        else graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY);
     }
 
     public void placeTagKCal (Tag tag, Graphics2D graphics2D){
