@@ -20,7 +20,6 @@ public class FileController {
     public static void loadFont(){
         try{
             poppins = Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\joaov\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Poppins-Black.ttf")).deriveFont(80f);
-            System.out.println(poppins.getFamily());
         } catch(Exception e){
             System.out.println("Exception in placeTagsTitle: " + e.getMessage());
         }

@@ -99,11 +99,14 @@ public class NameGenerationController {
             if(lines[i] != null) {
                 String name = lines[i].replaceAll("[0-9()]", "");
                 int amount = Integer.parseInt(lines[i].replaceAll("[^0-9]", ""));
-
+                System.out.printf("Creating new tag with name: %s, amount: %d", name, amount);
                 Tag tag = new Tag(name, amount);
                 tagsToPrint.add(tag);
             }
         }
+        System.out.println("start");
+        for(Tag t : tagsToPrint) System.out.println(t.getName());
+        System.out.println("finish");
     }
 
     public Color getRandomColor(){

@@ -24,7 +24,6 @@ public class NameViewConfig {
         } else{
             AlertController.createErrorDialog("Posição Inicial ou Nomes está vazio", "");
         }
-
     }
 
 

@@ -31,6 +31,8 @@ public class Sheet {
     private final int valOffSetY = 210;
     private final int lotOffSetX = 385;
     private final int lotOffSetY = 290;
+    private final int weightOffSetX = 215;
+    private final int weightOffSetY = 1490;
     private final int nameTagLateralGap = 5;
 
     private int tagWidthInPx;
@@ -82,6 +84,7 @@ public class Sheet {
         placeTagTitle(tag, graphics2D);
         placeTagDescription(tag, graphics2D);
         placeTagNumber(tag, graphics2D);
+        if(tag.getTagType().equals("DC") || tag.getTagType().equals("SK")) placeTagWeight(tag, graphics2D);
         placeTagKCal(tag, graphics2D);
         placeTagVal(tag, graphics2D);
         placeTagLot(tag, graphics2D);
@@ -165,6 +168,14 @@ public class Sheet {
         else graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY);
     }
 
+
+    public void placeTagWeight (Tag tag, Graphics2D graphics2D){
+        Font font = FileController.getRotatedPoppins().deriveFont(40f);
+        graphics2D.setFont(font);
+        graphics2D.setColor(Color.WHITE);
+        graphics2D.drawString(String.format("%03dg", tag.getTagWeight()), currentXPosition + weightOffSetX, currentYPosition + weightOffSetY);
+    }
+
     public void placeTagKCal (Tag tag, Graphics2D graphics2D){
         Font font = FileController.getRotatedPoppins().deriveFont(35f);
         graphics2D.setFont(font);
@@ -202,7 +213,7 @@ public class Sheet {
         Rectangle rect = new Rectangle(currentXPosition, currentYPosition, 930, 516);
 
         graphics2D.setColor(Color.BLACK);
-        graphics2D.drawRect(rect.x, rect.y, rect.width, rect.height);
+        //graphics2D.drawRect(rect.x, rect.y, rect.width, rect.height);
         int lineHeight = metrics.getHeight();
         int lineNumber = 0;
 

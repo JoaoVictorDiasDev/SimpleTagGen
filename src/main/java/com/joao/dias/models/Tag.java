@@ -1,14 +1,10 @@
 package com.joao.dias.models;
 
-import com.joao.dias.controllers.AlertController;
 import com.joao.dias.repositories.tagInfoRepository;
 import com.joao.dias.utils.ColorController;
 
 import java.awt.*;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.sql.*;
-import java.util.Scanner;
 
 
 public class Tag {
@@ -17,15 +13,15 @@ public class Tag {
     private int tagWidth;
     private int tagHeight;
 
-    private static String fullName;
-    private static int amountToPrint;
+    private String fullName;
+    private int amountToPrint;
 
     private String tagTitle;
     private String tagDescription;
     private int tagNumber;
     private String tagType;
     private int tagKCal;
-    private int tagWeigth;
+    private int tagWeight;
 
 
     public Tag (int id){
@@ -58,6 +54,8 @@ public class Tag {
     public int getTagNumber() {
         return tagNumber;
     }
+
+    public int getTagWeight(){return tagWeight; }
 
     public String getTagType() {
         return tagType;
@@ -117,7 +115,7 @@ public class Tag {
         this.tagKCal = tagKCal;
     }
 
-    public void setTagWeigth(int tagWeigth) {
-        this.tagWeigth = tagWeigth;
+    public void setTagWeight(int tagWeight) {
+        this.tagWeight = tagWeight;
     }
 }
