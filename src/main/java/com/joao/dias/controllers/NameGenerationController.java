@@ -30,7 +30,7 @@ public class NameGenerationController {
         createNewSheet();
 
         int line = (int) startingTagPosition/5;
-        int col = (int) startingTagPosition%5;
+        int col = (int) startingTagPosition%5 - 1;
 
         currentPositionX = marginLeft + col*currentSheet.getTagWidthInPx()+ (col*currentSheet.getNameTagLateralGap());
         currentPositionY = marginTop + (line*currentSheet.getTagHeightInPx());
@@ -51,15 +51,16 @@ public class NameGenerationController {
         saveAllSheets();
         printAllSheets();
         resetPrintList();
+        resetTagList();
 
     }
 
     private void resetPrintList() {
-        sheets = new ArrayList<Sheet>();
+        sheets.clear();
     }
 
     private void resetTagList(){
-        tagsToPrint = new ArrayList<>();
+        tagsToPrint.clear();
     }
 
     private void genericPrinter(Tag tagToPrint) {

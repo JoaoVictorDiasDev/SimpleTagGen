@@ -27,6 +27,7 @@ public class PassViewConfig {
 
     @FXML
     protected void generate(){
+        resetGUI();
         PassGenerationController passGenerationController = new PassGenerationController();
         passGenerationController.populateNamesList(textArea.getText());
         passGenerationController.populateMessageList(textArea.getText());
@@ -42,17 +43,18 @@ public class PassViewConfig {
 
     private List<Button> createNamesButtons(List<String> names, Map<String, String> nameToNumberMap){
         List<Button> nameButtonsList = new ArrayList<>();
-        for(String name : names){
+        for(int i = 0; i < names.size(); i++){
+            String name = names.get(i);
             Button button = new Button();
-            button.setPrefHeight(30f);
-            button.setMaxHeight(30f);
-            button.setMinHeight(30f);
-            button.setText(name);
+            button.setPrefHeight(40f);
+            button.setMaxHeight(40f);
+            button.setMinHeight(40f);
+            button.setText(String.format("%2d - %s", i, name));
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-                    System.out.println(nameToNumberMap.get(button.getText()));
-                    ClipBoardController.CopyToClipBoard(nameToNumberMap.get((button.getText())));
+                    System.out.println(nameToNumberMap.get(name));
+                    ClipBoardController.CopyToClipBoard(nameToNumberMap.get((name)));
                 }
             });
             nameButtonsList.add(button);
@@ -62,9 +64,13 @@ public class PassViewConfig {
 
     private List<Button> createMessageButtons(List<String> names, Map<String, String> nameToMessageMap){
         List<Button> messageButtonsList = new ArrayList<>();
-        for(String name : names){
+        for(int i = 0; i < names.size(); i++){
+            String name = names.get(i);
             Button button = new Button();
-            button.setText("msg");
+            button.setPrefHeight(40f);
+            button.setMaxHeight(40f);
+            button.setMinHeight(40f);
+            button.setText(String.format("%2d - msg", i));
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
@@ -77,6 +83,11 @@ public class PassViewConfig {
         return messageButtonsList;
     }
 
+    private void resetGUI () {
+        nameVBox.getChildren().clear();
+        msgVBox.getChildren().clear();
+
+    }
 
 
     @FXML
