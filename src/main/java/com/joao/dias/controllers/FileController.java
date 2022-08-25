@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class FileController {
 
-    static String savePath = "C:\\WorkSpace\\Intellij\\SimpleTagGen\\src\\images\\Print\\";
+    static String savePath = "src/images/Print/";
 
     private static Font poppins;
 
