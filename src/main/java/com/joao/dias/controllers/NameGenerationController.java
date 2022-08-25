@@ -29,8 +29,8 @@ public class NameGenerationController {
     public NameGenerationController (int startingTagPosition){
         createNewSheet();
 
-        int line = (int) startingTagPosition/5;
-        int col = (int) startingTagPosition%5 - 1;
+        int line = startingTagPosition/5;
+        int col = startingTagPosition%5;
 
         currentPositionX = marginLeft + col*currentSheet.getTagWidthInPx()+ (col*currentSheet.getNameTagLateralGap());
         currentPositionY = marginTop + (line*currentSheet.getTagHeightInPx());
@@ -105,9 +105,6 @@ public class NameGenerationController {
                 tagsToPrint.add(tag);
             }
         }
-        System.out.println("start");
-        for(Tag t : tagsToPrint) System.out.println(t.getName());
-        System.out.println("finish");
     }
 
     public Color getRandomColor(){

@@ -4,6 +4,7 @@ import com.joao.dias.controllers.AlertController;
 import com.joao.dias.controllers.FileController;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -231,6 +232,7 @@ public class Sheet {
         int y = rect.y + ((rect.height - metrics.getHeight()) / 3) + metrics.getAscent();
         graphics2D.drawString(bagCounter, x, y + (lineHeight * lineNumber));
         incrementTagPosition();
+        System.out.println("print is working!");
 
     }
 

@@ -34,9 +34,7 @@ public class PassViewConfig {
         passGenerationController.populateNameToNumberMap(textArea.getText());
         passGenerationController.populateNameToMessageMap(textArea.getText());
 
-        System.out.println("Working!!!");
 
-        System.out.println(passGenerationController.getNameList());
         nameVBox.getChildren().addAll(createNamesButtons(passGenerationController.getNameList(), passGenerationController.getNameToNumberMap()));
         msgVBox.getChildren().addAll(createMessageButtons(passGenerationController.getNameList(), passGenerationController.getNameToMessageMap()));
     }
@@ -53,7 +51,6 @@ public class PassViewConfig {
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-                    System.out.println(nameToNumberMap.get(name));
                     ClipBoardController.CopyToClipBoard(nameToNumberMap.get((name)));
                 }
             });
@@ -74,7 +71,6 @@ public class PassViewConfig {
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-                    System.out.println(nameToMessageMap.get(name));
                     ClipBoardController.CopyToClipBoard(nameToMessageMap.get((name)));
                 }
             });

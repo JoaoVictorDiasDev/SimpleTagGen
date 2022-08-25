@@ -1,5 +1,6 @@
 package com.joao.dias;
 
+import com.joao.dias.controllers.FileController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -41,6 +42,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        FileController.loadFont();
         launch();
     }
 
