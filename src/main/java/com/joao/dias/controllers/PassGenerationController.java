@@ -44,10 +44,17 @@ public class PassGenerationController {
     }
 
     private String getMessage(String lineInfo){
-        return String.format("Boa noite, %s \uD83D\uDE03\n\n" +
+        if(getPaymentMethod(lineInfo).equals("dinheiro") || getPaymentMethod(lineInfo).equals("Dinheiro"))
+            return String.format("Boa tarde, %s \uD83D\uDE03\n\n" +
+                    "Passando apenas para lembrar que seu pedido será entregue amanhã, no período da %s, com previsão de chegada entre %s, tudo bem ? \uD83D\uDE0A\n" +
+                    "Vamos confirmar os dados do seu pedido ?\n\n\uD83D\uDCCD *Endereço de entrega:* %s - %s - certifique-se de que o complemento está correto (se houver)\n" +
+                    "\uD83D\uDCB3 *Forma de pagamento:* %s (Favor confirmar se devemos levar troco)\n " +
+                    "\uD83D\uDCB2 *Valor total*: %s\n\nCaso seja necessário alterar alguma informação, basta nos responder essa mensagem \uD83D\uDE09\n" +
+                    "Agradecemos e permanecemos à disposição ! \t", getName(lineInfo), getDeliveryPeriod(lineInfo),  getTime(lineInfo), getAdress(lineInfo), getDistrict(lineInfo), getPaymentMethod(lineInfo), getValue(lineInfo));
+        return String.format("Boa tarde, %s \uD83D\uDE03\n\n" +
                 "Passando apenas para lembrar que seu pedido será entregue amanhã, no período da %s, com previsão de chegada entre %s, tudo bem ? \uD83D\uDE0A\n" +
                 "Vamos confirmar os dados do seu pedido ?\n\n\uD83D\uDCCD *Endereço de entrega:* %s - %s - certifique-se de que o complemento está correto (se houver)\n" +
-                "\uD83D\uDCB3 *Forma de pagamento* %s\n" +
+                "\uD83D\uDCB3 *Forma de pagamento:* %s\n" +
                 "\uD83D\uDCB2 *Valor total*: %s\n\nCaso seja necessário alterar alguma informação, basta nos responder essa mensagem \uD83D\uDE09\n" +
                 "Agradecemos e permanecemos à disposição ! \t", getName(lineInfo), getDeliveryPeriod(lineInfo),  getTime(lineInfo), getAdress(lineInfo), getDistrict(lineInfo), getPaymentMethod(lineInfo), getValue(lineInfo));
     }

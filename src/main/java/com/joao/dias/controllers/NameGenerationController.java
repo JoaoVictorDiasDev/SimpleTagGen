@@ -98,7 +98,8 @@ public class NameGenerationController {
         String [] lines = namesText.split("\\n");
         for(int i = 0; i < lines.length; i++){
             if(lines[i] != null) {
-                String name = lines[i].replaceAll("[0-9()]", "");
+                String fullName = lines[i].replaceAll("[0-9()]", "");
+                String name = fullName.split(" ")[0] + " " + fullName.split(" ")[1].charAt(0) + ".";
                 int amount = Integer.parseInt(lines[i].replaceAll("[^0-9]", ""));
                 System.out.printf("Creating new tag with name: %s, amount: %d", name, amount);
                 Tag tag = new Tag(name, amount);
