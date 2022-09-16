@@ -14,7 +14,8 @@ import java.io.IOException;
 public class tagInfoRepository {
     public String genericStringFinder(double id, int col) {
         try{
-            File file = new File("src/data/data.xlsx");
+            File file = new File ("src/data/data.xlsx").getAbsoluteFile();
+
             FileInputStream fis = new FileInputStream(file);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);
@@ -27,7 +28,7 @@ public class tagInfoRepository {
             }
 
         } catch(IOException e){
-            System.out.println(e.getStackTrace());
+            System.out.println(e.getMessage());
         }
         return null;
     }
