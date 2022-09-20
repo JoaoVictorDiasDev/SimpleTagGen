@@ -208,13 +208,16 @@ public class Sheet {
     }
 
     public void placeNameTag (Tag tag, Color color, int counter){
+        FileController fc = new FileController();
+        fc.loadFont();
+
         Graphics2D graphics2D = (Graphics2D) img.getGraphics();
         graphics2D.setFont(FileController.getPoppins());
         FontMetrics metrics = graphics2D.getFontMetrics(FileController.getPoppins());
         Rectangle rect = new Rectangle(currentXPosition, currentYPosition, 930, 516);
 
         graphics2D.setColor(Color.BLACK);
-        //graphics2D.drawRect(rect.x, rect.y, rect.width, rect.height);
+        graphics2D.drawRect(rect.x, rect.y, rect.width, rect.height);
         int lineHeight = metrics.getHeight();
         int lineNumber = 0;
 

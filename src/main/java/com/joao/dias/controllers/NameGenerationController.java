@@ -112,8 +112,7 @@ public class NameGenerationController {
         final float hue = 0.200f*colorCounter;
         final float saturation = 0.7f;//1.0 for brilliant, 0.0 for dull
         final float luminance = 0.9f; //1.0 for brighter, 0.0 for black
-        Color backGroundColor = new Color(0, 0, 0);
-        backGroundColor = Color.getHSBColor(hue, saturation, luminance);
+        Color backGroundColor = Color.getHSBColor(hue, saturation, luminance);
 
         colorCounter++;
         return backGroundColor;
