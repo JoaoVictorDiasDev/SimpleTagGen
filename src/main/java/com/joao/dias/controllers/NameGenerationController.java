@@ -48,7 +48,7 @@ public class NameGenerationController {
         }
 
         addCurrentSheetToPrintList();
-        saveAllSheets();
+        //saveAllSheets();
         printAllSheets();
         resetPrintList();
         resetTagList();

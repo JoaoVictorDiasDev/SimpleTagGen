@@ -96,6 +96,4 @@ public class PassViewConfig {
         App.changeToPassView();
     }
 
-    @FXML
-    protected void changeToTagView(){ App.changeToTagView(); }
 }

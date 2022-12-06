@@ -25,7 +25,6 @@ public class App extends Application {
         try {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("anchor.fxml"));
 
-            grids.add((Pane) FXMLLoader.load(getClass().getResource("tagView.fxml")));
             grids.add((Pane) FXMLLoader.load(getClass().getResource("nameView.fxml")));
             grids.add((Pane) FXMLLoader.load(getClass().getResource("passView.fxml")));
 
@@ -49,19 +48,14 @@ public class App extends Application {
 
     public static void changeToNameView(){
         root.getChildren().remove(grids.get(currentPaneId));
-        root.getChildren().add(grids.get(1));
-        currentPaneId = 1;
-    }
-
-    public static void changeToTagView(){
-        root.getChildren().remove(grids.get(currentPaneId));
         root.getChildren().add(grids.get(0));
         currentPaneId = 0;
     }
 
+
     public static void changeToPassView(){
         root.getChildren().remove(grids.get(currentPaneId));
-        root.getChildren().add(grids.get(2));
-        currentPaneId = 2;
+        root.getChildren().add(grids.get(1));
+        currentPaneId = 1;
     }
 }

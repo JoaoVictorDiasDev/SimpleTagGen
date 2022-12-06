@@ -37,6 +37,4 @@ public class NameViewConfig {
         App.changeToPassView();
     }
 
-    @FXML
-    protected void changeToTagView(){ App.changeToTagView(); }
 }

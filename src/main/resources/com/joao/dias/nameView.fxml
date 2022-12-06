@@ -71,11 +71,6 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#changeToTagView" prefHeight="23.0" prefWidth="260.0" text="ETIQUETA MARMITAS">
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
                         <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0" style="-fx-background-color: red;" text="ETIQUETA NOMES" />
                         <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0" text="GERADOR PASSANDO" />
                         <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS" />
