@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class TagGenerationController {
 
     static Sheet currentSheet;
-    private static List<Sheet> sheets = new LinkedList<Sheet>();
+    private static List<Sheet> sheets = new LinkedList<>();
 
     public static void PrintTags(PrintRequest printRequest) {
         createNewSheet();
@@ -37,7 +37,7 @@ public class TagGenerationController {
     private static void genericPrinter(int [] printArray, int tagType){
         for(int i = 0; i < printArray.length; i++){
             if(printArray[i] != 0) {
-                Tag tag = new Tag(Integer.valueOf(String.format("%d%02d", tagType, i)));
+                Tag tag = new Tag(Integer.parseInt(String.format("%d%02d", tagType, i)));
                 while(printArray[i] != 0){
                     if(currentSheet.isSheetFull()){
                         addCurrentSheetToPrintList();
@@ -60,13 +60,13 @@ public class TagGenerationController {
 
     private static void saveAllSheets(){
         for(Sheet sheet : sheets){
-            FileController.saveImage(sheet.getImg());
+            FileController.saveImage(sheet.getSheetImg());
         }
     }
 
     private static void printAllSheets() {
         for(Sheet sheet : sheets){
-            PrintController.createPrintJob(sheet.getImg());
+            PrintController.createPrintJob(sheet.getSheetImg());
         }
     }
 }

@@ -4,7 +4,6 @@ import com.joao.dias.controllers.AlertController;
 import com.joao.dias.controllers.FileController;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -28,10 +27,10 @@ public class Sheet {
     private final int numberOffsetY = 1500;
     private final int KCalOffsetX = 450;
     private final int KcalOffsetY = 400;
-    private final int valOffSetX = 323;
-    private final int valOffSetY = 210;
-    private final int lotOffSetX = 385;
-    private final int lotOffSetY = 290;
+    private final int valOffSetX = 0;
+    private final int valOffSetY = 0;
+    private final int lotOffSetX = 0;
+    private final int lotOffSetY = 0;
     private final int weightOffSetX = 215;
     private final int weightOffSetY = 1490;
     private final int nameTagLateralGap = 5;
@@ -39,32 +38,22 @@ public class Sheet {
     private int tagWidthInPx;
     private int tagHeightInPx;
 
-    private BufferedImage img;
+    private BufferedImage sheetImg;
 
     private boolean isSheetFull = false;
 
-/*
-    public Sheet(int sheetHeightInPx, int sheetWidthInPx, int startingXPosition, int startingYPosition){
-        this.sheetHeightInPx = sheetHeightInPx;
-        this.sheetWidthInPx = sheetWidthInPx;
-        this.currentXPosition = startingXPosition;
-        this.currentYPosition = startingYPosition;
-        createNewSheet();
-
-    }
-*/
 
     //sheetType: Tag or Name
     //This constructor automatically sets sheet specs depending on its purpose
     public Sheet(String sheetType){
         switch (sheetType){
             case "Tag":
-                sheetHeightInPx = 7014;
-                sheetWidthInPx = 4960;
-                currentXPosition = 118;
-                currentYPosition = 246;
-                tagHeightInPx = 1630;
-                tagWidthInPx = 940;
+                sheetHeightInPx = 1654;
+                sheetWidthInPx = 2362;
+                currentXPosition = 0;
+                currentYPosition = 0;
+                tagHeightInPx = 1654;
+                tagWidthInPx = 2362;
                 break;
             case "Name":
                 sheetHeightInPx = 7014;
@@ -79,14 +68,9 @@ public class Sheet {
     }
 
     public void placeTagOnSheet(Tag tag){
-        Graphics2D graphics2D = (Graphics2D) img.getGraphics();
+        Graphics2D graphics2D = (Graphics2D) sheetImg.getGraphics();
 
-        placeTagBase (tag, graphics2D);
-        placeTagTitle(tag, graphics2D);
-        placeTagDescription(tag, graphics2D);
-        placeTagNumber(tag, graphics2D);
-        if(tag.getTagType().equals("DC") || tag.getTagType().equals("SK")) placeTagWeight(tag, graphics2D);
-        placeTagKCal(tag, graphics2D);
+        placeTagBase(tag, graphics2D);
         placeTagVal(tag, graphics2D);
         placeTagLot(tag, graphics2D);
         incrementTagPosition();
@@ -128,61 +112,12 @@ public class Sheet {
     public void placeTagBase (Tag tag, Graphics2D graphics2D){
         try {
             Image tagBase = ImageIO.read(new File(tag.getTagBaseImgPath()));
-            graphics2D.drawImage(tagBase, currentXPosition, currentYPosition, null);
+            graphics2D.drawImage(tagBase, 0, 0, null);
         } catch (IOException e){
             AlertController.createErrorDialog(e.getMessage(), e.getStackTrace().toString());
         }
     }
 
-    public void placeTagTitle(Tag tag, Graphics2D graphics2D){
-        int lineHeightIncrement = 65;
-        int lineHeigth = 0;
-        Font font = FileController.getRotatedPoppins().deriveFont(58.0f);
-        graphics2D.setFont(font);
-        graphics2D.setColor(Color.WHITE);
-
-        for (String line : tag.getTagTitle().split("\n")) {
-            graphics2D.drawString(line, currentXPosition + titleOffsetX + lineHeigth, currentYPosition + titleOffsetY);
-            lineHeigth += lineHeightIncrement;
-        }
-    }
-
-    public void placeTagDescription(Tag tag, Graphics2D graphics2D){
-        int lineHeightIncrement = 50;
-        int lineHeigth = 0;
-        Font font = FileController.getRotatedPoppins().deriveFont(45.0f);
-        graphics2D.setFont(font);
-        graphics2D.setColor(tag.getTagColor());
-
-        for (String line : tag.getTagDescription().split("\n")) {
-            graphics2D.drawString(line, currentXPosition + descriptionOffsetX + lineHeigth, currentYPosition + descriptionOffsetY);
-            lineHeigth += lineHeightIncrement;
-        }
-    }
-
-    public void placeTagNumber (Tag tag, Graphics2D graphics2D){
-        Font font = FileController.getRotatedPoppins().deriveFont(100f);
-        graphics2D.setFont(font);
-        graphics2D.setColor(Color.WHITE);
-        if(tag.getTagNumber() >= 10)
-            graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY - 20);
-        else graphics2D.drawString(String.format("%02d", tag.getTagNumber()), currentXPosition + numberOffsetX, currentYPosition + numberOffsetY);
-    }
-
-
-    public void placeTagWeight (Tag tag, Graphics2D graphics2D){
-        Font font = FileController.getRotatedPoppins().deriveFont(40f);
-        graphics2D.setFont(font);
-        graphics2D.setColor(Color.WHITE);
-        graphics2D.drawString(String.format("%03dg", tag.getTagWeight()), currentXPosition + weightOffSetX, currentYPosition + weightOffSetY);
-    }
-
-    public void placeTagKCal (Tag tag, Graphics2D graphics2D){
-        Font font = FileController.getRotatedPoppins().deriveFont(35f);
-        graphics2D.setFont(font);
-        graphics2D.setColor(tag.getTagColor());
-        graphics2D.drawString(String.format("%02d", tag.getTagKCal()), currentXPosition + KCalOffsetX, currentYPosition + KcalOffsetY);
-    }
 
     public void placeTagVal (Tag tag, Graphics2D graphics2D){
         Font font = FileController.getRotatedPoppins().deriveFont(35f);
@@ -211,7 +146,7 @@ public class Sheet {
         FileController fc = new FileController();
         fc.loadFont();
 
-        Graphics2D graphics2D = (Graphics2D) img.getGraphics();
+        Graphics2D graphics2D = (Graphics2D) sheetImg.getGraphics();
         graphics2D.setFont(FileController.getPoppins());
         FontMetrics metrics = graphics2D.getFontMetrics(FileController.getPoppins());
         Rectangle rect = new Rectangle(currentXPosition, currentYPosition, 930, 516);
@@ -235,7 +170,6 @@ public class Sheet {
         int y = rect.y + ((rect.height - metrics.getHeight()) / 3) + metrics.getAscent();
         graphics2D.drawString(bagCounter, x, y + (lineHeight * lineNumber));
         incrementTagPosition();
-        System.out.println("print is working!");
 
     }
 
@@ -244,15 +178,15 @@ public class Sheet {
     }
 
     void createNewSheet(){
-        img = new BufferedImage(sheetWidthInPx, sheetHeightInPx, 1);
-        Graphics2D graphics2D = (Graphics2D) img.createGraphics();
+        sheetImg = new BufferedImage(sheetWidthInPx, sheetHeightInPx, 1);
+        Graphics2D graphics2D = sheetImg.createGraphics();
         graphics2D.setColor(Color.WHITE);
         graphics2D.fillRect(0,0, sheetWidthInPx, sheetHeightInPx);
         graphics2D.drawRect(0,0, sheetWidthInPx, sheetHeightInPx);
     }
 
-    public BufferedImage getImg(){
-        return img;
+    public BufferedImage getSheetImg(){
+        return sheetImg;
     }
 
     public int getTagWidthInPx() {

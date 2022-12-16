@@ -1,6 +1,5 @@
 package com.joao.dias.models;
 
-import com.joao.dias.repositories.tagInfoRepository;
 import com.joao.dias.utils.ColorController;
 
 import java.awt.*;
@@ -29,8 +28,7 @@ public class Tag {
         this.tagWidth = 944;
         this.tagHeight = 1630;
 
-        tagInfoRepository repo = new tagInfoRepository();
-        repo.setupTag(this);
+        this.tagType = "LC"; //TODO: Tag type must be dynamically chosen
 
     }
 
@@ -40,7 +38,7 @@ public class Tag {
     }
 
     public String getTagBaseImgPath() {
-        return new File(String.format("src/images/Bases/%s.png", getTagType())).getAbsolutePath();
+        return new File(String.format("src/images/Bases/%d.png", id)).getAbsolutePath();
     }
 
     public String getTagTitle() {

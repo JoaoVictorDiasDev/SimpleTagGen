@@ -5,9 +5,7 @@ import com.joao.dias.models.Tag;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class NameGenerationController {
 
@@ -80,7 +78,7 @@ public class NameGenerationController {
 
     private void saveAllSheets(){
         for(Sheet sheet: sheets){
-            FileController.saveImage(sheet.getImg());
+            FileController.saveImage(sheet.getSheetImg());
         }
     }
 
@@ -90,7 +88,7 @@ public class NameGenerationController {
 
     public void printAllSheets(){
         for(Sheet sheet : sheets){
-           PrintController.createPrintJob(sheet.getImg());
+           PrintController.createPrintJob(sheet.getSheetImg());
         }
     }
 
