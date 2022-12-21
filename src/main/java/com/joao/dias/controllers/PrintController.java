@@ -3,16 +3,15 @@ package com.joao.dias.controllers;
 import com.joao.dias.utils.PrintJob;
 
 import java.awt.image.BufferedImage;
-import java.awt.print.Book;
-import java.awt.print.PageFormat;
-import java.awt.print.Paper;
-import java.awt.print.PrinterJob;
+import java.awt.print.*;
 
 public class PrintController {
 
-    public static void createPrintJob(BufferedImage imgToPrint){
+    public static void createPrintJob(BufferedImage imgToPrint, int numCopies){
         try {
             PrinterJob job = PrinterJob.getPrinterJob();
+            job.setCopies(numCopies);
+
             if (job.printDialog()){
                 PageFormat pf = job.defaultPage();
                 Paper paper = pf.getPaper();
@@ -35,4 +34,14 @@ public class PrintController {
         }
     }
 
+    public static void createPrintJob(BufferedImage imgToPrint){
+        try {
+            PrintJob pj = new PrintJob(imgToPrint);
+            PrinterJob job = PrinterJob.getPrinterJob();
+            job.setPrintable(pj);
+            if(job.printDialog()) job.print();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }

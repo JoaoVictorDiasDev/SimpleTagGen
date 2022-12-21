@@ -7,7 +7,7 @@ import java.io.File;
 
 
 public class Tag {
-    private int id;
+    private String id;
 
     private int tagWidth;
     private int tagHeight;
@@ -23,12 +23,10 @@ public class Tag {
     private int tagWeight;
 
 
-    public Tag (int id){
-        if (id > 10) this.id = id;
+    public Tag (String id){
+        this.id = id;
         this.tagWidth = 944;
         this.tagHeight = 1630;
-
-        this.tagType = "LC"; //TODO: Tag type must be dynamically chosen
 
     }
 
@@ -38,7 +36,7 @@ public class Tag {
     }
 
     public String getTagBaseImgPath() {
-        return new File(String.format("src/images/Bases/%d.png", id)).getAbsolutePath();
+        return new File(String.format("src/images/Bases/%s.png", id)).getAbsolutePath();
     }
 
     public String getTagTitle() {
@@ -83,7 +81,7 @@ public class Tag {
         return Color.black;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
