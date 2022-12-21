@@ -7,7 +7,7 @@ import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 
 public class PrintJob implements Printable{
-    BufferedImage printImage;
+    private final BufferedImage printImage;
     public PrintJob(BufferedImage printImage){
         this.printImage = printImage;
     }

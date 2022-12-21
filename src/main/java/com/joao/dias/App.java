@@ -16,18 +16,18 @@ import java.util.List;
  */
 public class App extends Application {
     static AnchorPane root;
-    private static Scene scene;
-    static List<Pane> grids = new ArrayList<>();
+    static final List<Pane> grids = new ArrayList<>();
     static int currentPaneId = 0;
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void start(Stage stage)  {
         try {
-            root = (AnchorPane) FXMLLoader.load(getClass().getResource("anchor.fxml"));
+            root = FXMLLoader.load(getClass().getResource("anchor.fxml"));
 
-            grids.add((Pane) FXMLLoader.load(getClass().getResource("tagView.fxml")));
-            grids.add((Pane) FXMLLoader.load(getClass().getResource("nameView.fxml")));
-            grids.add((Pane) FXMLLoader.load(getClass().getResource("passView.fxml")));
+            grids.add(FXMLLoader.load(getClass().getResource("tagView.fxml")));
+            grids.add(FXMLLoader.load(getClass().getResource("nameView.fxml")));
+            grids.add(FXMLLoader.load(getClass().getResource("passView.fxml")));
 
             root.getChildren().add(grids.get(currentPaneId));
             Scene scene = new Scene(root, 1400, 900);

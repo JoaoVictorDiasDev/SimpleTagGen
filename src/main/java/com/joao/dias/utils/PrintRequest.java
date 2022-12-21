@@ -3,7 +3,7 @@ package com.joao.dias.utils;
 import java.util.ArrayList;
 
 public class PrintRequest {
-    private ArrayList<PrintData> printList = new ArrayList<>();
+    private final ArrayList<PrintData> printList = new ArrayList<>();
 
     public static class PrintData {
         private final String id;

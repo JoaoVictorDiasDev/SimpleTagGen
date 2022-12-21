@@ -8,81 +8,76 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane minHeight="899.0" minWidth="1400.0" prefHeight="902.0" prefWidth="1413.0" style="-fx-background-color: grey;" stylesheets="@tagView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joao.dias.configs.NameViewConfig">
-   <children>
-      <Pane maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 30px 30px 0;">
-         <children>
-            <VBox maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
-               <children>
-                  <HBox prefHeight="10.0" prefWidth="200.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" top="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <Label styleClass="h2" text="ETIQUETAS: " />
-                        <Label styleClass="h2" text="50" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="10.0" prefWidth="200.0">
-                     <children>
-                        <Label styleClass="h2" text="FOLHAS: " />
-                        <Label styleClass="h2" text="50" />
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label styleClass="h2" text="Posição Inicial">
-                     <VBox.margin>
-                        <Insets left="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextArea fx:id="startPositionTxt" maxHeight="865.0" minHeight="25.0" prefHeight="49.0" prefWidth="260.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" top="5.0" />
-                     </VBox.margin>
-                  </TextArea>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="724.0" prefWidth="300.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#print" prefHeight="23.0" prefWidth="260.0" text="IMPRIMIR">
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="300.0" layoutY="-7.0" maxHeight="900.0" maxWidth="800.0" minHeight="900.0" minWidth="792.0" prefHeight="900.0" prefWidth="792.0" style="-fx-background-color: grey;">
-         <children>
-            <TextArea fx:id="namesTextArea" layoutX="15.0" layoutY="21.0" maxHeight="865.0" minHeight="25.0" prefHeight="865.0" prefWidth="765.0" />
-         </children></Pane>
-      <Pane layoutX="1100.0" maxHeight="900.0" maxWidth="313.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="313.0" style="-fx-background-color: white;">
-         <children>
-            <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
-               <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#changeToTagView" prefHeight="23.0" prefWidth="260.0" text="ETIQUETA MARMITAS">
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0" style="-fx-background-color: red;" text="ETIQUETA NOMES" />
-                        <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0" text="GERADOR PASSANDO" />
-                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children></Pane>
-   </children>
+<Pane minHeight="899.0" minWidth="1400.0" prefHeight="902.0" prefWidth="1413.0" style="-fx-background-color: grey;"
+      stylesheets="@tagView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.joao.dias.configs.NameViewConfig">
+   <Pane maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0"
+         style="-fx-background-color: white; -fx-background-radius: 0 30px 30px 0;">
+      <VBox maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0"
+            prefWidth="300.0">
+         <HBox prefHeight="10.0" prefWidth="200.0">
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0"/>
+            </VBox.margin>
+            <Label styleClass="h2" text="ETIQUETAS: "/>
+            <Label styleClass="h2" text="50"/>
+         </HBox>
+         <HBox prefHeight="10.0" prefWidth="200.0">
+            <VBox.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+            </VBox.margin>
+            <Label styleClass="h2" text="FOLHAS: "/>
+            <Label styleClass="h2" text="50"/>
+         </HBox>
+         <Label styleClass="h2" text="Posição Inicial">
+            <VBox.margin>
+               <Insets left="20.0"/>
+            </VBox.margin>
+         </Label>
+         <TextArea fx:id="startPositionTxt" maxHeight="865.0" minHeight="25.0" prefHeight="49.0"
+                   prefWidth="260.0">
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="5.0"/>
+            </VBox.margin>
+         </TextArea>
+         <VBox alignment="BOTTOM_CENTER" prefHeight="724.0" prefWidth="300.0">
+            <opaqueInsets>
+               <Insets/>
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="20.0"/>
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#print" prefHeight="23.0" prefWidth="260.0"
+                    text="IMPRIMIR">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Button>
+         </VBox>
+      </VBox>
+   </Pane>
+   <Pane layoutX="300.0" layoutY="-7.0" maxHeight="900.0" maxWidth="800.0" minHeight="900.0" minWidth="792.0"
+         prefHeight="900.0" prefWidth="792.0" style="-fx-background-color: grey;">
+      <TextArea fx:id="namesTextArea" layoutX="15.0" layoutY="21.0" maxHeight="865.0" minHeight="25.0"
+                prefHeight="865.0" prefWidth="765.0"/>
+   </Pane>
+   <Pane layoutX="1100.0" maxHeight="900.0" maxWidth="313.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0"
+         prefWidth="313.0" style="-fx-background-color: white;">
+      <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0"
+            prefHeight="900.0" prefWidth="300.0">
+         <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
+            <Button mnemonicParsing="false" onAction="#changeToTagView" prefHeight="23.0" prefWidth="260.0"
+                    text="ETIQUETA MARMITAS">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0"
+                    style="-fx-background-color: red;" text="ETIQUETA NOMES"/>
+            <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0"
+                    text="GERADOR PASSANDO"/>
+            <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS"/>
+         </VBox>
+      </VBox>
+   </Pane>
 </Pane>

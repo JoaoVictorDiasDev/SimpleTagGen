@@ -9,14 +9,14 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Scanner;
 
 public class FileController {
 
-    static String savePath = "src/images/Print/";
+    static final String savePath = "src/images/Print/";
 
     private static Font poppins;
 
+    @SuppressWarnings("ConstantConditions")
     public void loadFont(){
         try{
             poppins = Font.createFont(Font.TRUETYPE_FONT, getClass().getClassLoader().getResourceAsStream("Poppins-Black.ttf"));
@@ -47,9 +47,8 @@ public class FileController {
     public static Font getRotatedPoppins(){
         AffineTransform affineTransform = new AffineTransform();
         affineTransform.rotate(Math.toRadians(270), 0,0);
-        Font rotatedFont = poppins.deriveFont(affineTransform);
 
-        return rotatedFont;
+        return poppins.deriveFont(affineTransform);
     }
 
 

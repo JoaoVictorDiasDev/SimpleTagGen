@@ -1,16 +1,13 @@
 package com.joao.dias.configs;
 
 import com.joao.dias.App;
-import com.joao.dias.utils.ClipBoardController;
 import com.joao.dias.controllers.TagGenerationController;
 import com.joao.dias.utils.PrintRequest;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 public class TagViewConfig {

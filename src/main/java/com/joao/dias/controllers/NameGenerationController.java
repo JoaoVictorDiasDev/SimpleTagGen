@@ -9,20 +9,17 @@ import java.util.List;
 
 public class NameGenerationController {
 
-    int tagHeight = 516; //2cm
-    int tagWidth = 930; //4cm
-    int marginTop = 151; //1cm
-    int marginLeft = 103; //0,5cm
-    int tagLateralGap = 5;
+    final int marginTop = 151; //1 cm
+    final int marginLeft = 103; //0,5 cm
 
-    int currentPositionX;
-    int currentPositionY;
+    final int currentPositionX;
+    final int currentPositionY;
 
     private Sheet currentSheet;
     private int colorCounter;
 
-    private List<Tag> tagsToPrint = new ArrayList<>();
-    private List<Sheet> sheets = new ArrayList<Sheet>();
+    private final List<Tag> tagsToPrint = new ArrayList<>();
+    private final List<Sheet> sheets = new ArrayList<>();
 
     public NameGenerationController (int startingTagPosition){
         createNewSheet();
@@ -41,8 +38,8 @@ public class NameGenerationController {
     public void printNames(String namesText){
         populateTagsToPrint(namesText);
 
-        for(int i = 0; i < tagsToPrint.size(); i++){
-            genericPrinter(tagsToPrint.get(i));
+        for (Tag tag : tagsToPrint) {
+            genericPrinter(tag);
         }
 
         addCurrentSheetToPrintList();
@@ -94,11 +91,11 @@ public class NameGenerationController {
 
     public void populateTagsToPrint(String namesText){
         String [] lines = namesText.split("\\n");
-        for(int i = 0; i < lines.length; i++){
-            if(lines[i] != null) {
-                String fullName = lines[i].replaceAll("[0-9()]", "");
+        for (String line : lines) {
+            if (line != null) {
+                String fullName = line.replaceAll("[\\d()]", "");
                 String name = fullName.split(" ")[0] + " " + fullName.split(" ")[1].charAt(0) + ".";
-                int amount = Integer.parseInt(lines[i].replaceAll("[^0-9]", ""));
+                int amount = Integer.parseInt(line.replaceAll("\\D", ""));
                 System.out.printf("Creating new tag with name: %s, amount: %d", name, amount);
                 Tag tag = new Tag(name, amount);
                 tagsToPrint.add(tag);

@@ -4,13 +4,10 @@ import com.joao.dias.models.Sheet;
 import com.joao.dias.models.Tag;
 import com.joao.dias.utils.PrintRequest;
 
-import java.util.List;
-import java.util.LinkedList;
 
 public class TagGenerationController {
 
     static Sheet currentSheet;
-    private static List<Sheet> sheets = new LinkedList<>();
 
     public static void PrintTags(PrintRequest printRequest) {
         createNewSheet();
@@ -19,13 +16,6 @@ public class TagGenerationController {
         for(PrintRequest.PrintData data : printRequest.getPrintList()) {
             genericPrinter(data.getId(), data.getCopies());
         }
-
-        addCurrentSheetToPrintList();
-        resetPrintList();
-    }
-
-    private static void resetPrintList() {
-        sheets = new LinkedList<>();
     }
 
     private static void genericPrinter(String id, int copies){
@@ -38,14 +28,5 @@ public class TagGenerationController {
         currentSheet = new Sheet("Tag");
     }
 
-    private static void addCurrentSheetToPrintList() {
-        sheets.add(currentSheet);
-    }
-
-    private static void saveAllSheets(){
-        for(Sheet sheet : sheets){
-            FileController.saveImage(sheet.getSheetImg());
-        }
-    }
 }
 

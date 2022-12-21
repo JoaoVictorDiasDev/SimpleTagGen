@@ -8,90 +8,83 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane minHeight="899.0" minWidth="1400.0" prefHeight="902.0" prefWidth="1413.0" style="-fx-background-color: grey;" stylesheets="@tagView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joao.dias.configs.PassViewConfig">
-   <children>
-      <Pane maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 30px 30px 0;">
-         <children>
-            <VBox maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
-               <children>
-                  <Label styleClass="h1" text="TXT">
-                     <VBox.margin>
-                        <Insets left="20.0" top="30.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextArea fx:id="textArea" maxHeight="903.0" minHeight="25.0" prefHeight="903.0" prefWidth="260.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" top="5.0" />
-                     </VBox.margin>
-                  </TextArea>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="724.0" prefWidth="300.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#generate" prefHeight="23.0" prefWidth="260.0" text="GERAR">
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </VBox>
-               </children>
+<Pane minHeight="899.0" minWidth="1400.0" prefHeight="902.0" prefWidth="1413.0" style="-fx-background-color: grey;"
+      stylesheets="@tagView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.joao.dias.configs.PassViewConfig">
+   <Pane maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0"
+         style="-fx-background-color: white; -fx-background-radius: 0 30px 30px 0;">
+      <VBox maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0"
+            prefWidth="300.0">
+         <Label styleClass="h1" text="TXT">
+            <VBox.margin>
+               <Insets left="20.0" top="30.0"/>
+            </VBox.margin>
+         </Label>
+         <TextArea fx:id="textArea" maxHeight="903.0" minHeight="25.0" prefHeight="903.0" prefWidth="260.0">
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="5.0"/>
+            </VBox.margin>
+         </TextArea>
+         <VBox alignment="BOTTOM_CENTER" prefHeight="724.0" prefWidth="300.0">
+            <opaqueInsets>
+               <Insets/>
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="20.0"/>
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#generate" prefHeight="23.0" prefWidth="260.0"
+                    text="GERAR">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Button>
+         </VBox>
+      </VBox>
+   </Pane>
+   <Pane layoutX="300.0" layoutY="-7.0" maxHeight="900.0" maxWidth="800.0" minHeight="900.0" minWidth="792.0"
+         prefHeight="900.0" prefWidth="792.0" style="-fx-background-color: grey;">
+      <Pane layoutX="14.0" layoutY="17.0" prefHeight="880.0" prefWidth="561.0"
+            style="-fx-background-color: red; -fx-background-radius: 20px;">
+         <Label layoutX="244.0" layoutY="14.0" styleClass="h1" text="NOMES" textFill="WHITE"/>
+         <ScrollPane layoutY="60.0" prefHeight="827.0" prefWidth="561.0">
+            <VBox fx:id="nameVBox" alignment="TOP_CENTER" prefHeight="816.0" prefWidth="557.0" spacing="10.0"
+                  style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <padding>
+                  <Insets top="10.0"/>
+               </padding>
             </VBox>
-         </children>
+         </ScrollPane>
       </Pane>
-      <Pane layoutX="300.0" layoutY="-7.0" maxHeight="900.0" maxWidth="800.0" minHeight="900.0" minWidth="792.0" prefHeight="900.0" prefWidth="792.0" style="-fx-background-color: grey;">
-         <children>
-            <Pane layoutX="14.0" layoutY="17.0" prefHeight="880.0" prefWidth="561.0" style="-fx-background-color: red; -fx-background-radius: 20px;">
-               <children>
-                  <Label layoutX="244.0" layoutY="14.0" styleClass="h1" text="NOMES" textFill="WHITE" />
-                  <ScrollPane layoutY="60.0" prefHeight="827.0" prefWidth="561.0">
-                     <content>
-                        <VBox fx:id="nameVBox" alignment="TOP_CENTER" prefHeight="816.0" prefWidth="557.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
-                           <padding>
-                              <Insets top="10.0" />
-                           </padding>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
-               </children>
-            </Pane>
-            <Pane layoutX="586.0" layoutY="17.0" prefHeight="880.0" prefWidth="189.0" style="-fx-background-color: green; -fx-background-radius: 20px;">
-               <children>
-                  <Label layoutX="66.0" layoutY="14.0" styleClass="h1" text="MSG" textFill="WHITE" />
-                  <ScrollPane layoutY="61.0" prefHeight="827.0" prefWidth="189.0">
-                     <content>
-                        <VBox fx:id="msgVBox" alignment="TOP_CENTER" prefHeight="811.0" prefWidth="186.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
-                           <padding>
-                              <Insets top="10.0" />
-                           </padding>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
-               </children>
-            </Pane>
-         </children></Pane>
-      <Pane layoutX="1100.0" maxHeight="900.0" maxWidth="313.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="313.0" style="-fx-background-color: white;">
-         <children>
-            <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0" prefWidth="300.0">
-               <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#changeToTagView" prefHeight="23.0" prefWidth="260.0" text="ETIQUETA MARMITAS">
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0" text="GERADOR PASSANDO" />
-                        <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0" style="-fx-background-color: ;" text="ETIQUETA NOMES" />
-                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS" />
-                     </children>
-                  </VBox>
-               </children>
+      <Pane layoutX="586.0" layoutY="17.0" prefHeight="880.0" prefWidth="189.0"
+            style="-fx-background-color: green; -fx-background-radius: 20px;">
+         <Label layoutX="66.0" layoutY="14.0" styleClass="h1" text="MSG" textFill="WHITE"/>
+         <ScrollPane layoutY="61.0" prefHeight="827.0" prefWidth="189.0">
+            <VBox fx:id="msgVBox" alignment="TOP_CENTER" prefHeight="811.0" prefWidth="186.0" spacing="10.0"
+                  style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <padding>
+                  <Insets top="10.0"/>
+               </padding>
             </VBox>
-         </children></Pane>
-   </children>
+         </ScrollPane>
+      </Pane>
+   </Pane>
+   <Pane layoutX="1100.0" maxHeight="900.0" maxWidth="313.0" minHeight="900.0" minWidth="300.0" prefHeight="900.0"
+         prefWidth="313.0" style="-fx-background-color: white;">
+      <VBox alignment="TOP_CENTER" maxHeight="900.0" maxWidth="300.0" minHeight="900.0" minWidth="300.0"
+            prefHeight="900.0" prefWidth="300.0">
+         <VBox alignment="TOP_CENTER" prefHeight="793.0" prefWidth="300.0" spacing="15.0">
+            <Button mnemonicParsing="false" onAction="#changeToTagView" prefHeight="23.0" prefWidth="260.0"
+                    text="ETIQUETA MARMITAS">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#changeToPassView" prefHeight="23.0" prefWidth="260.0"
+                    text="GERADOR PASSANDO"/>
+            <Button mnemonicParsing="false" onAction="#changeToNameView" prefHeight="23.0" prefWidth="260.0"
+                     text="ETIQUETA NOMES"/>
+            <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="260.0" text="GERADOR ROTAS"/>
+         </VBox>
+      </VBox>
+   </Pane>
 </Pane>

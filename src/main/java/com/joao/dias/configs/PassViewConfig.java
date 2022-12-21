@@ -3,8 +3,6 @@ package com.joao.dias.configs;
 import com.joao.dias.App;
 import com.joao.dias.controllers.PassGenerationController;
 import com.joao.dias.utils.ClipBoardController;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -48,12 +46,7 @@ public class PassViewConfig {
             button.setMaxHeight(40f);
             button.setMinHeight(40f);
             button.setText(String.format("%2d - %s", i, name));
-            button.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent actionEvent) {
-                    ClipBoardController.CopyToClipBoard(nameToNumberMap.get((name)));
-                }
-            });
+            button.setOnAction(actionEvent -> ClipBoardController.CopyToClipBoard(nameToNumberMap.get((name))));
             nameButtonsList.add(button);
         }
         return nameButtonsList;
@@ -68,12 +61,7 @@ public class PassViewConfig {
             button.setMaxHeight(40f);
             button.setMinHeight(40f);
             button.setText(String.format("%2d - msg", i));
-            button.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent actionEvent) {
-                    ClipBoardController.CopyToClipBoard(nameToMessageMap.get((name)));
-                }
-            });
+            button.setOnAction(actionEvent -> ClipBoardController.CopyToClipBoard(nameToMessageMap.get((name))));
             messageButtonsList.add(button);
         }
         return messageButtonsList;

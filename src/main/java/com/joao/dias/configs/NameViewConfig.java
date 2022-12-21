@@ -5,7 +5,6 @@ import com.joao.dias.controllers.AlertController;
 import com.joao.dias.controllers.NameGenerationController;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 
 
 public class NameViewConfig {

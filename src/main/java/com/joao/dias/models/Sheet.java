@@ -19,20 +19,6 @@ public class Sheet {
     private int currentXPosition;
     private int currentYPosition;
 
-    private final int titleOffsetX = 140;
-    private final int titleOffsetY = 1300;
-    private final int descriptionOffsetX = 335;
-    private final int descriptionOffsetY = 1500;
-    private final int numberOffsetX = 165;
-    private final int numberOffsetY = 1500;
-    private final int KCalOffsetX = 450;
-    private final int KcalOffsetY = 400;
-    private final int valOffSetX = 0;
-    private final int valOffSetY = 0;
-    private final int lotOffSetX = 0;
-    private final int lotOffSetY = 0;
-    private final int weightOffSetX = 215;
-    private final int weightOffSetY = 1490;
     private final int nameTagLateralGap = 5;
 
     private int tagWidthInPx;
@@ -58,8 +44,8 @@ public class Sheet {
             case "Name":
                 sheetHeightInPx = 7014;
                 sheetWidthInPx = 4867;
-                currentXPosition = 103; //1cm
-                currentYPosition = 151; //0.5cm
+                currentXPosition = 103; //1 cm
+                currentYPosition = 151; //0.5 cm
                 tagHeightInPx = 516;
                 tagWidthInPx = 930;
                 break;
@@ -71,8 +57,6 @@ public class Sheet {
         Graphics2D graphics2D = (Graphics2D) sheetImg.getGraphics();
 
         placeTagBase(tag, graphics2D);
-        //placeTagVal(tag, graphics2D);
-        //placeTagLot(tag, graphics2D);
         incrementTagPosition();
     }
 
@@ -114,7 +98,7 @@ public class Sheet {
             Image tagBase = ImageIO.read(new File(tag.getTagBaseImgPath()));
             graphics2D.drawImage(tagBase, 0, 0, null);
         } catch (IOException e){
-            AlertController.createErrorDialog(e.getMessage(), e.getStackTrace().toString());
+            AlertController.createErrorDialog(e.getMessage(), e.getMessage());
         }
     }
 
@@ -126,9 +110,11 @@ public class Sheet {
 
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH, 3);
-        DateFormat df = new SimpleDateFormat("MM/YY");
+        DateFormat df = new SimpleDateFormat("MM/yy");
         String val = df.format(cal.getTime());
 
+        int valOffSetX = 0;
+        int valOffSetY = 0;
         graphics2D.drawString(val, currentXPosition + valOffSetX, currentYPosition + valOffSetY);
     }
 
@@ -137,8 +123,11 @@ public class Sheet {
         graphics2D.setFont(font);
         graphics2D.setColor(tag.getTagColor());
 
-        DateFormat df = new SimpleDateFormat("MMYYdd");
-        String lot = String.format("%03d%s", tag.getId(), df.format(Calendar.getInstance().getTime()));
+        DateFormat df = new SimpleDateFormat("MMyydd");
+        //TODO: FIX LOT FORMATING FOR NEW TAG ID
+        String lot = String.format("%s%s", tag.getId(), df.format(Calendar.getInstance().getTime()));
+        int lotOffSetX = 0;
+        int lotOffSetY = 0;
         graphics2D.drawString(lot, currentXPosition + lotOffSetX, currentYPosition + lotOffSetY);
     }
 
