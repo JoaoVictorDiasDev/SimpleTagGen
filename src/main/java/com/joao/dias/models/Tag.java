@@ -64,4 +64,8 @@ public class Tag {
 
     public int getAmountToPrint(){ return amountToPrint; }
 
+    public String getTagID(){
+        return this.id;
+    }
+
 }

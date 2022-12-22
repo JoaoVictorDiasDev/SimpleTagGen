@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -95,7 +96,10 @@ public class Sheet {
 
     public void placeTagBase (Tag tag, Graphics2D graphics2D){
         try {
-            Image tagBase = ImageIO.read(new File(tag.getTagBaseImgPath()));
+            String path = String.format("%s.png", tag.getTagID());
+            InputStream is = getClass().getClassLoader().getResourceAsStream(path);
+            Image tagBase = ImageIO.read(is);
+
             graphics2D.drawImage(tagBase, 0, 0, null);
         } catch (IOException e){
             AlertController.createErrorDialog(e.getMessage(), e.getMessage());
